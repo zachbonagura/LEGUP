@@ -42,16 +42,16 @@ public class FillinBlackBasicRuleTest
         cell.setData(NurikabeType.BLACK.toValue());
         board.addModifiedData(cell);
 
-        Assert.assertNull(RULE.checkRule(transition));
+        Assert.assertNull(RULE.checkRule(transition, transition.getReferenceElement()));
 
         Point location = new Point(1, 1);
         for(int i = 0; i < board.getHeight(); i++) {
             for(int k = 0; k < board.getWidth(); k++) {
                 Point point  = new Point(k, i);
                 if(point.equals(location)) {
-                    Assert.assertNull(RULE.checkRuleAt(transition, board.getCell(k, i)));
+                    Assert.assertNull(RULE.checkRuleAt(transition, board.getCell(k, i), transition.getReferenceElement()));
                 } else {
-                    Assert.assertNotNull(RULE.checkRuleAt(transition, board.getCell(k, i)));
+                    Assert.assertNotNull(RULE.checkRuleAt(transition, board.getCell(k, i), transition.getReferenceElement()));
                 }
             }
         }

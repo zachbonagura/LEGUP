@@ -35,7 +35,7 @@ public class BlackBetweenRegionsBasicRule extends BasicRule {
      * otherwise error message
      */
     @Override
-    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
+    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
         Set<ContradictionRule> contras = new LinkedHashSet<>();
         contras.add(new MultipleNumbersContradictionRule());
         contras.add(new TooManySpacesContradictionRule());

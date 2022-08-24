@@ -31,7 +31,7 @@ public class EmptyCornersBasicRule extends BasicRule {
      * otherwise error message
      */
     @Override
-    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
+    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
         LightUpBoard initialBoard = (LightUpBoard) transition.getParents().get(0).getBoard();
         LightUpCell cell = (LightUpCell) initialBoard.getPuzzleElement(puzzleElement);
         LightUpBoard finalBoard = (LightUpBoard) transition.getBoard();
@@ -95,7 +95,7 @@ public class EmptyCornersBasicRule extends BasicRule {
             LightUpCell cell = (LightUpCell) element;
             int temp = cell.getData();
             cell.setData(LightUpCellType.EMPTY.value);
-            if (checkRuleRawAt(transition, cell) == null) {
+            if (checkRuleRawAt(transition, cell, transition.getReferenceElement()) == null) {
                 LightUpCell modCell = (LightUpCell) lightUpBoard.getPuzzleElement(cell);
                 modCell.setData(LightUpCellType.EMPTY.value);
                 lightUpBoard.addModifiedData(modCell);

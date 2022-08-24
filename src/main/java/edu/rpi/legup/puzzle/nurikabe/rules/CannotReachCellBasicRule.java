@@ -28,7 +28,7 @@ public class CannotReachCellBasicRule extends BasicRule {
      * otherwise error message
      */
     @Override
-    protected String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
+    protected String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
         ContradictionRule contraRule = new UnreachableWhiteCellContradictionRule();
 
         NurikabeBoard destBoardState = (NurikabeBoard) transition.getBoard();

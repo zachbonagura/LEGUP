@@ -30,7 +30,7 @@ public class SurroundTentWithGrassBasicRule extends BasicRule {
      * otherwise error message
      */
     @Override
-    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
+    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
         if (puzzleElement instanceof TreeTentLine) {
             return super.getInvalidUseOfRuleMessage() + ": Line is not valid for this rule.";
         }

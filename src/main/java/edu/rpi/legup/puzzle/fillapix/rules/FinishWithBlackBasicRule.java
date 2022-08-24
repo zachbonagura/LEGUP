@@ -18,7 +18,7 @@ public class FinishWithBlackBasicRule extends BasicRule {
     }
 
     @Override
-    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
+    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
         FillapixBoard board = (FillapixBoard) transition.getBoard();
         FillapixBoard parentBoard = (FillapixBoard) transition.getParents().get(0).getBoard();
         FillapixCell cell = (FillapixCell) board.getPuzzleElement(puzzleElement);

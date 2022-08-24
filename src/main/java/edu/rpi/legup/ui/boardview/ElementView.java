@@ -18,8 +18,11 @@ public abstract class ElementView implements Shape {
     private Color hoverColor;
     private Color modifiedColor;
     private Color caseColor;
+    private Color gaColor;
     private Color invalidColor;
     private boolean showCasePicker;
+    private boolean showGaPicker;
+    private boolean isGaRulePickable;
     private boolean isCaseRulePickable;
     private boolean isHover;
     private boolean isSelected;
@@ -34,6 +37,8 @@ public abstract class ElementView implements Shape {
         this.hoverColor = new Color(0x79, 0x86, 0xCB, 255);
         this.modifiedColor = new Color(0x64, 0xDD, 0x17, 255);
         this.caseColor = new Color(0x1A, 0x23, 0x7E, 200);
+        //this.gaColor = new Color(255, 238, 0);
+        this.gaColor = caseColor;
         this.invalidColor = new Color(0xf4, 0x43, 0x36, 200);
         this.isHover = false;
         this.isSelected = false;
@@ -66,6 +71,9 @@ public abstract class ElementView implements Shape {
         }
         if (showCasePicker && isCaseRulePickable) {
             drawCase(graphics2D);
+        }
+        if (showGaPicker && isGaRulePickable) {
+            drawGA(graphics2D);
         }
         if (isHover) {
             drawHover(graphics2D);
@@ -102,6 +110,11 @@ public abstract class ElementView implements Shape {
 
     public void drawCase(Graphics2D graphics2D) {
         graphics2D.setColor(caseColor);
+        graphics2D.fill(new Rectangle2D.Double(location.x + 1.5f, location.y + 1.5f, size.width - 3, size.height - 3));
+    }
+
+    public void drawGA(Graphics2D graphics2D) {
+        graphics2D.setColor(gaColor);
         graphics2D.fill(new Rectangle2D.Double(location.x + 1.5f, location.y + 1.5f, size.width - 3, size.height - 3));
     }
 
@@ -193,6 +206,14 @@ public abstract class ElementView implements Shape {
         this.showCasePicker = showCasePicker;
     }
 
+    public void setShowGaPicker(boolean showGaPicker) {
+        this.showGaPicker = showGaPicker;
+    }
+
+    public boolean isShowGaPicker() {
+        return showGaPicker;
+    }
+
     /**
      * Gets the isCaseRulePickable field to determine if this ElementView
      * should be highlighted in some way to indicate if it can be chosen by
@@ -213,6 +234,10 @@ public abstract class ElementView implements Shape {
      */
     public void setCaseRulePickable(boolean isCaseRulePickable) {
         this.isCaseRulePickable = isCaseRulePickable;
+    }
+
+    public void setGaRulePickable(boolean isGaRulePickable) {
+        this.isGaRulePickable = isGaRulePickable;
     }
 
     /**

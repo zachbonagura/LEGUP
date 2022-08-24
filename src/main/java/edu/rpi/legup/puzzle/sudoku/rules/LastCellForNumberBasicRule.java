@@ -26,7 +26,7 @@ public class LastCellForNumberBasicRule extends BasicRule {
      * @return null if the child node logically follow from the parent node at the specified puzzleElement,
      * otherwise error message
      */
-    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
+    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
         SudokuBoard initialBoard = (SudokuBoard) transition.getParents().get(0).getBoard();
         SudokuBoard finalBoard = (SudokuBoard) transition.getBoard();
 

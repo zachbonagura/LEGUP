@@ -55,7 +55,7 @@ public abstract class CaseRule extends Rule {
      * @return null if the child node logically follow from the parent node, otherwise error message
      */
     @Override
-    public String checkRule(TreeTransition transition) {
+    public String checkRule(TreeTransition transition, PuzzleElement reference) {
         List<TreeNode> parentNodes = transition.getParents();
         if (parentNodes.size() != 1) {
             return "Must not have multiple parent nodes";
@@ -74,7 +74,7 @@ public abstract class CaseRule extends Rule {
             }
         }
 
-        String check = checkRuleRaw(transition);
+        String check = checkRuleRaw(transition, reference);
 
         boolean isCorrect = (check == null);
         for (TreeTransition childTrans : parentNodes.get(0).getChildren()) {
@@ -95,7 +95,7 @@ public abstract class CaseRule extends Rule {
      * @return null if the child node logically follow from the parent node, otherwise error message
      */
     @Override
-    public abstract String checkRuleRaw(TreeTransition transition);
+    public abstract String checkRuleRaw(TreeTransition transition, PuzzleElement reference);
 
     /**
      * Checks whether the child node logically follows from the parent node at the specific puzzleElement index using
@@ -107,7 +107,7 @@ public abstract class CaseRule extends Rule {
      * otherwise error message
      */
     @Override
-    public String checkRuleAt(TreeTransition transition, PuzzleElement puzzleElement) {
+    public String checkRuleAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
         return this.INVALID_USE_MESSAGE;
     }
 
@@ -121,7 +121,7 @@ public abstract class CaseRule extends Rule {
      * otherwise error message
      */
     @Override
-    public abstract String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement);
+    public abstract String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference);
 }
 
 

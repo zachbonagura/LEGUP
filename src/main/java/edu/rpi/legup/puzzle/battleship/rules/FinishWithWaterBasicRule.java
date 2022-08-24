@@ -26,7 +26,7 @@ public class FinishWithWaterBasicRule extends BasicRule {
      * otherwise error message
      */
     @Override
-    protected String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
+    protected String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
         return null;
     }
 

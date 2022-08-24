@@ -14,6 +14,7 @@ public class TreeTransition extends TreeElement {
     private Rule rule;
     private boolean isCorrect;
     private boolean isVerified;
+    private PuzzleElement referenceElement;
 
     /**
      * TreeTransition Constructor create a transition from one node to another
@@ -312,7 +313,7 @@ public class TreeTransition extends TreeElement {
      */
     public boolean isCorrect() {
         if (isJustified() && !isVerified) {
-            isCorrect = rule.checkRule(this) == null;
+            isCorrect = rule.checkRule(this, this.referenceElement) == null;
             isVerified = true;
         }
         return isJustified() && isCorrect;
@@ -350,4 +351,12 @@ public class TreeTransition extends TreeElement {
     /*public int modifiedData_size(){
         return board.getModifiedData().size();
     }*/
+
+    public PuzzleElement getReferenceElement() {
+        return this.referenceElement;
+    }
+
+    public void setReferenceElement(PuzzleElement referenceElement) {
+        this.referenceElement = referenceElement;
+    }
 }

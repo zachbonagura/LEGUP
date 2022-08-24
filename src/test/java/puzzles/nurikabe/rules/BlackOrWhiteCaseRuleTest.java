@@ -43,9 +43,9 @@ public class BlackOrWhiteCaseRuleTest
             for(int k = 0; k < board.getWidth(); k++) {
                 Point point  = new Point(k, i);
                 if(point.equals(location)) {
-                    Assert.assertNull(RULE.checkRuleAt(transition, board.getCell(k, i)));
+                    Assert.assertNull(RULE.checkRuleAt(transition, board.getCell(k, i), transition.getReferenceElement()));
                 } else {
-                    Assert.assertNotNull(RULE.checkRuleAt(transition, board.getCell(k, i)));
+                    Assert.assertNotNull(RULE.checkRuleAt(transition, board.getCell(k, i), transition.getReferenceElement()));
                 }
             }
         }

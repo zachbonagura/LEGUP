@@ -28,7 +28,7 @@ public class SurroundRegionBasicRule extends BasicRule {
      * otherwise error message
      */
     @Override
-    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
+    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
         ContradictionRule contraRule = new TooManySpacesContradictionRule();
 
         NurikabeBoard destBoardState = (NurikabeBoard) transition.getBoard();

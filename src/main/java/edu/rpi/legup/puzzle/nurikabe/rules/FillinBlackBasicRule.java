@@ -29,7 +29,7 @@ public class FillinBlackBasicRule extends BasicRule {
      * otherwise error message
      */
     @Override
-    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
+    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
         NurikabeBoard board = (NurikabeBoard) transition.getBoard();
         NurikabeBoard origBoard = (NurikabeBoard) transition.getParents().get(0).getBoard();
         ContradictionRule contraRule = new NoNumberContradictionRule();

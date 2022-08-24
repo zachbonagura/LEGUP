@@ -29,7 +29,7 @@ public class TreeForTentBasicRule extends BasicRule {
      * otherwise error message
      */
     @Override
-    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
+    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
         if (!(puzzleElement instanceof TreeTentLine)) {
             return super.getInvalidUseOfRuleMessage() + ": Lines must be created for this rule.";
         }

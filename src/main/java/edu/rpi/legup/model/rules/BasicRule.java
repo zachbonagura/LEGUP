@@ -27,7 +27,7 @@ public abstract class BasicRule extends Rule {
      * @param transition transition to check
      * @return null if the child node logically follow from the parent node, otherwise error message
      */
-    public String checkRule(TreeTransition transition) {
+    public String checkRule(TreeTransition transition, PuzzleElement reference) {
         Board finalBoard = transition.getBoard();
 
         if (!finalBoard.isModified()) {
@@ -36,7 +36,7 @@ public abstract class BasicRule extends Rule {
                 transition.getParents().get(0).getChildren().size() != 1) {
             return "State must have only 1 parent and 1 child";
         } else {
-            return checkRuleRaw(transition);
+            return checkRuleRaw(transition, reference);
         }
     }
 
@@ -47,11 +47,11 @@ public abstract class BasicRule extends Rule {
      * @param transition transition to check
      * @return null if the child node logically follow from the parent node, otherwise error message
      */
-    public String checkRuleRaw(TreeTransition transition) {
+    public String checkRuleRaw(TreeTransition transition, PuzzleElement reference) {
         Board finalBoard = transition.getBoard();
         String checkStr = null;
         for (PuzzleElement puzzleElement : finalBoard.getModifiedData()) {
-            String tempStr = checkRuleAt(transition, puzzleElement);
+            String tempStr = checkRuleAt(transition, puzzleElement, reference);
             if (tempStr != null) {
                 checkStr = tempStr;
             }
@@ -68,7 +68,7 @@ public abstract class BasicRule extends Rule {
      * @return null if the child node logically follow from the parent node at the specified puzzleElement,
      * otherwise error message
      */
-    public String checkRuleAt(TreeTransition transition, PuzzleElement puzzleElement) {
+    public String checkRuleAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
         Board finalBoard = transition.getBoard();
         puzzleElement = finalBoard.getPuzzleElement(puzzleElement);
         String checkStr;
@@ -78,7 +78,7 @@ public abstract class BasicRule extends Rule {
                 transition.getParents().get(0).getChildren().size() != 1) {
             checkStr = "State must have only 1 parent and 1 child";
         } else {
-            checkStr = checkRuleRawAt(transition, puzzleElement);
+            checkStr = checkRuleRawAt(transition, puzzleElement, reference);
         }
         puzzleElement.setValid(checkStr == null);
         return checkStr;

@@ -24,7 +24,7 @@ public class WhiteSplitCaseRule extends CaseRule {
      * @return null if the child node logically follow from the parent node, otherwise error message
      */
     @Override
-    public String checkRuleRaw(TreeTransition transition) {
+    public String checkRuleRaw(TreeTransition transition, PuzzleElement reference) {
         return null;
     }
 
@@ -38,7 +38,7 @@ public class WhiteSplitCaseRule extends CaseRule {
      * otherwise error message
      */
     @Override
-    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
+    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
         return null;
     }
 

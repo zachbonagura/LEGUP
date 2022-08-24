@@ -45,7 +45,7 @@ public abstract class Rule {
      * @param transition transition to check
      * @return null if the child node logically follow from the parent node, otherwise error message
      */
-    public abstract String checkRule(TreeTransition transition);
+    public abstract String checkRule(TreeTransition transition, PuzzleElement reference);
 
     /**
      * Checks whether the transition logically follows from the parent node using this rule.
@@ -54,7 +54,7 @@ public abstract class Rule {
      * @param transition transition to check
      * @return null if the child node logically follow from the parent node, otherwise error message
      */
-    protected abstract String checkRuleRaw(TreeTransition transition);
+    protected abstract String checkRuleRaw(TreeTransition transition, PuzzleElement reference);
 
     /**
      * Checks whether the child node logically follows from the parent node
@@ -65,7 +65,7 @@ public abstract class Rule {
      * @return null if the child node logically follow from the parent node at the specified puzzleElement,
      * otherwise error message
      */
-    public abstract String checkRuleAt(TreeTransition transition, PuzzleElement puzzleElement);
+    public abstract String checkRuleAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference);
 
     /**
      * Checks whether the child node logically follows from the parent node
@@ -77,7 +77,7 @@ public abstract class Rule {
      * @return null if the child node logically follow from the parent node at the specified puzzleElement,
      * otherwise error message
      */
-    protected abstract String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement);
+    protected abstract String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference);
 
     /**
      * Loads the image file

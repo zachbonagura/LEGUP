@@ -29,7 +29,7 @@ public class MustLightBasicRule extends BasicRule {
      * otherwise error message
      */
     @Override
-    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
+    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
         LightUpBoard parentBoard = (LightUpBoard) transition.getParents().get(0).getBoard();
         LightUpBoard finalBoard = (LightUpBoard) transition.getBoard();
         LightUpCell parentCell = (LightUpCell) parentBoard.getPuzzleElement(puzzleElement);

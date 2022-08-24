@@ -29,7 +29,7 @@ public class PreventBlackSquareBasicRule extends BasicRule {
      * otherwise error message
      */
     @Override
-    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
+    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
         ContradictionRule contraRule = new BlackSquareContradictionRule();
 
         NurikabeBoard destBoardState = (NurikabeBoard) transition.getBoard();

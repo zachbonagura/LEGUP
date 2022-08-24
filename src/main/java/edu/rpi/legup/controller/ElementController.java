@@ -6,10 +6,9 @@ import edu.rpi.legup.history.AutoCaseRuleCommand;
 import edu.rpi.legup.model.Puzzle;
 import edu.rpi.legup.model.gameboard.Board;
 import edu.rpi.legup.model.gameboard.CaseBoard;
+import edu.rpi.legup.model.gameboard.GABoard;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
-import edu.rpi.legup.model.tree.TreeElement;
-import edu.rpi.legup.model.tree.TreeElementType;
-import edu.rpi.legup.model.tree.TreeTransition;
+import edu.rpi.legup.model.tree.*;
 import edu.rpi.legup.ui.DynamicView;
 import edu.rpi.legup.ui.boardview.BoardView;
 import edu.rpi.legup.ui.boardview.ElementSelection;
@@ -77,7 +76,28 @@ public class ElementController implements MouseListener, MouseMotionListener, Ac
         TreeViewSelection selection = treeView.getSelection();
 
         if (elementView != null) {
-            if (board instanceof CaseBoard) {
+            if (board instanceof GABoard) {
+                GABoard gaBoard = (GABoard) board;
+                boolean canExecute = true;
+                if (!gaBoard.isPickable(elementView.getPuzzleElement())) {
+                    canExecute = false;
+                }
+                if (canExecute) {
+                    // run the general algorithm now!
+                    // well actually just set the right rule and reference point
+//                    Tree tree = getInstance().getTree();
+//                    TreeNode node = (TreeNode) selection.getFirstSelection().getTreeElement();
+//                    TreeTransition transition = (TreeTransition) tree.addTreeElement(node);
+//                    transition.setRule(gaBoard.getGaRule());
+                    TreeTransition transition = (TreeTransition) selection.getFirstSelection().getTreeElement();
+                    transition.setReferenceElement(elementView.getPuzzleElement());
+                    transition.setRule(gaBoard.getGaRule());
+                }
+                else {
+                    System.out.println("can't execute!!!");
+                }
+            }
+            else if (board instanceof CaseBoard) {
                 CaseBoard caseBoard = (CaseBoard) board;
                 AutoCaseRuleCommand autoCaseRuleCommand = new AutoCaseRuleCommand(elementView, selection, caseBoard.getCaseRule(), caseBoard, e);
                 if (autoCaseRuleCommand.canExecute()) {
@@ -123,7 +143,7 @@ public class ElementController implements MouseListener, MouseMotionListener, Ac
                 if (treeElement.getType() == TreeElementType.TRANSITION && board.getModifiedData().contains(element)) {
                     TreeTransition transition = (TreeTransition) treeElement;
                     if (transition.isJustified() && !transition.isCorrect()) {
-                        error = transition.getRule().checkRuleAt(transition, element);
+                        error = transition.getRule().checkRuleAt(transition, element, transition.getReferenceElement());
                     }
                 }
                 if (error != null) {
@@ -185,7 +205,7 @@ public class ElementController implements MouseListener, MouseMotionListener, Ac
                 if (treeElement.getType() == TreeElementType.TRANSITION && board.getModifiedData().contains(element)) {
                     TreeTransition transition = (TreeTransition) treeElement;
                     if (transition.isJustified() && !transition.isCorrect()) {
-                        error = transition.getRule().checkRuleAt(transition, element);
+                        error = transition.getRule().checkRuleAt(transition, element, transition.getReferenceElement());
                     }
                 }
                 if (error != null) {

@@ -1,20 +1,24 @@
 package edu.rpi.legup.puzzle.lightup.rules;
 
 import edu.rpi.legup.model.gameboard.Board;
+import edu.rpi.legup.model.gameboard.GABoard;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
 import edu.rpi.legup.model.rules.BasicRule;
+import edu.rpi.legup.model.rules.GARule;
 import edu.rpi.legup.model.tree.TreeNode;
 import edu.rpi.legup.model.tree.TreeTransition;
 import edu.rpi.legup.puzzle.lightup.LightUpBoard;
 import edu.rpi.legup.puzzle.lightup.LightUpCell;
 import edu.rpi.legup.puzzle.lightup.LightUpCellType;
 
-public class EmptyCellinLightBasicRule extends BasicRule {
+public class EmptyCellinLightBasicRule extends GARule {
 
     public EmptyCellinLightBasicRule() {
         super("LTUP-BASC-0002", "Empty Cells in Light",
                 "Cells in light must be empty.",
-                "edu/rpi/legup/images/lightup/rules/EmptyCellInLight.png");
+                "edu/rpi/legup/images/lightup/rules/EmptyCellInLight.png",
+                new LightOrEmptyCaseRule(),
+                new BulbsInPathContradictionRule());
     }
 
     /**
@@ -27,7 +31,7 @@ public class EmptyCellinLightBasicRule extends BasicRule {
      * otherwise error message
      */
     @Override
-    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
+    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
         LightUpBoard initialBoard = (LightUpBoard) transition.getParents().get(0).getBoard();
         initialBoard.fillWithLight();
         LightUpCell initCell = (LightUpCell) initialBoard.getPuzzleElement(puzzleElement);
@@ -36,6 +40,18 @@ public class EmptyCellinLightBasicRule extends BasicRule {
             return null;
         }
         return super.getInvalidUseOfRuleMessage() + ": Cell is not forced to be empty";
+    }
+
+    @Override
+    public GABoard getGABoard(Board board) {
+        LightUpBoard lightUpBoard = (LightUpBoard) board;
+        GABoard gaBoard = new GABoard(lightUpBoard, this.caseRule, this.contradictionRule, this);
+        for (PuzzleElement data : lightUpBoard.getPuzzleElements()) {
+            if (((LightUpCell) data).getType() == LightUpCellType.EMPTY) {
+                gaBoard.addPickableElement(data);
+            }
+        }
+        return gaBoard;
     }
 
     /**

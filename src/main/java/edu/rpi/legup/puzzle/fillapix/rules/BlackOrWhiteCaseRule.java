@@ -54,7 +54,7 @@ public class BlackOrWhiteCaseRule extends CaseRule {
     }
 
     @Override
-    public String checkRuleRaw(TreeTransition transition) {
+    public String checkRuleRaw(TreeTransition transition, PuzzleElement reference) {
         List<TreeTransition> childTransitions = transition.getParents().get(0).getChildren();
         if (childTransitions.size() != 2) {
             return super.getInvalidUseOfRuleMessage() + ": This case rule must have 2 children.";
@@ -82,7 +82,7 @@ public class BlackOrWhiteCaseRule extends CaseRule {
     }
 
     @Override
-    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
+    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
         return null;
     }
 }

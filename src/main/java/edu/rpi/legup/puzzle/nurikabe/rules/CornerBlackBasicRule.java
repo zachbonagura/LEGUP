@@ -34,7 +34,7 @@ public class CornerBlackBasicRule extends BasicRule {
      * otherwise error message
      */
     @Override
-    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
+    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
         NurikabeBoard board = (NurikabeBoard) transition.getBoard();
         NurikabeCell cell = (NurikabeCell) board.getPuzzleElement(puzzleElement);
         if (cell.getType() != NurikabeType.BLACK)

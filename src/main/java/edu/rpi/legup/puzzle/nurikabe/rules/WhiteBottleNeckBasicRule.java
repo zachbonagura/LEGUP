@@ -31,7 +31,7 @@ public class WhiteBottleNeckBasicRule extends BasicRule {
      * otherwise error message
      */
     @Override
-    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
+    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
         Set<ContradictionRule> contras = new LinkedHashSet<>();
         contras.add(new NoNumberContradictionRule());
         contras.add(new TooFewSpacesContradictionRule());

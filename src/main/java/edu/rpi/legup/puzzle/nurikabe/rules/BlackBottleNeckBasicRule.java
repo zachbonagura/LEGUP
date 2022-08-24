@@ -29,7 +29,7 @@ public class BlackBottleNeckBasicRule extends BasicRule {
      * otherwise error message
      */
     @Override
-    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
+    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
         ContradictionRule contraRule = new IsolateBlackContradictionRule();
 
         NurikabeBoard destBoardState = (NurikabeBoard) transition.getBoard();

@@ -51,16 +51,16 @@ public class SurroundRegionBasicRuleTest
         cell4.setData(NurikabeType.BLACK.toValue());
         board.addModifiedData(cell4);
 
-        Assert.assertNull(RULE.checkRule(transition));
+        Assert.assertNull(RULE.checkRule(transition, transition.getReferenceElement()));
 
         for(int i = 0; i < board.getHeight(); i++) {
             for(int k = 0; k < board.getWidth(); k++) {
                 Point point  = new Point(k, i);
                 if(point.equals(cell1.getLocation()) || point.equals(cell2.getLocation()) ||
                         point.equals(cell3.getLocation()) || point.equals(cell4.getLocation())) {
-                    Assert.assertNull(RULE.checkRuleAt(transition, board.getCell(k, i)));
+                    Assert.assertNull(RULE.checkRuleAt(transition, board.getCell(k, i), transition.getReferenceElement()));
                 } else {
-                    Assert.assertNotNull(RULE.checkRuleAt(transition, board.getCell(k, i)));
+                    Assert.assertNotNull(RULE.checkRuleAt(transition, board.getCell(k, i), transition.getReferenceElement()));
                 }
             }
         }
@@ -82,15 +82,15 @@ public class SurroundRegionBasicRuleTest
         cell2.setData(NurikabeType.BLACK.toValue());
         board.addModifiedData(cell2);
 
-        Assert.assertNull(RULE.checkRule(transition));
+        Assert.assertNull(RULE.checkRule(transition, transition.getReferenceElement()));
 
         for(int i = 0; i < board.getHeight(); i++) {
             for(int k = 0; k < board.getWidth(); k++) {
                 Point point  = new Point(k, i);
                 if(point.equals(cell1.getLocation()) || point.equals(cell2.getLocation())) {
-                    Assert.assertNull(RULE.checkRuleAt(transition, board.getCell(k, i)));
+                    Assert.assertNull(RULE.checkRuleAt(transition, board.getCell(k, i), transition.getReferenceElement()));
                 } else {
-                    Assert.assertNotNull(RULE.checkRuleAt(transition, board.getCell(k, i)));
+                    Assert.assertNotNull(RULE.checkRuleAt(transition, board.getCell(k, i), transition.getReferenceElement()));
                 }
             }
         }

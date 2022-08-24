@@ -21,7 +21,7 @@ public abstract class BasicRule_Generic extends BasicRule {
         this.ELIMINATION_RULE = eliminationRule;
     }
 
-    public String checkRuleRawAt(TreeTransition transition, PuzzleElement element)
+    public String checkRuleRawAt(TreeTransition transition, PuzzleElement element, PuzzleElement reference)
     {
 
         // Check that the puzzle element is not unknown

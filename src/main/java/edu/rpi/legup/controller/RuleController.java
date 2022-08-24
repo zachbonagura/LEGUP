@@ -5,6 +5,7 @@ import edu.rpi.legup.app.LegupPreferences;
 import edu.rpi.legup.history.*;
 import edu.rpi.legup.model.Puzzle;
 import edu.rpi.legup.model.gameboard.CaseBoard;
+import edu.rpi.legup.model.gameboard.GABoard;
 import edu.rpi.legup.model.rules.*;
 import edu.rpi.legup.model.tree.*;
 import edu.rpi.legup.ui.proofeditorui.rulesview.RuleButton;
@@ -84,14 +85,17 @@ public class RuleController implements ActionListener {
                 updateErrorString = validate.getError();
             }
         } else {
-            boolean def = LegupPreferences.getInstance().getUserPrefAsBool(LegupPreferences.ALLOW_DEFAULT_RULES);
-            ICommand validate = def ? new ApplyDefaultBasicRuleCommand(selection, (BasicRule) rule) : new ValidateBasicRuleCommand(selection, (BasicRule) rule);
-            if (validate.canExecute()) {
-                getInstance().getHistory().pushChange(validate);
-                validate.execute();
-            } else {
-                updateErrorString = validate.getError();
-            }
+            GARule gaRule = (GARule) rule;
+            //GABoard gaBoard = new GABoard(selection.getFirstSelection().getTreeElement().getBoard(), gaRule.getCaseRule(), gaRule.getContradictionRule());
+            puzzle.notifyBoardListeners(listener -> listener.onGABoardAdded(gaRule.getGABoard(selection.getFirstSelection().getTreeElement().getBoard())));
+//            boolean def = LegupPreferences.getInstance().getUserPrefAsBool(LegupPreferences.ALLOW_DEFAULT_RULES);
+//            ICommand validate = def ? new ApplyDefaultBasicRuleCommand(selection, (BasicRule) rule) : new ValidateBasicRuleCommand(selection, (BasicRule) rule);
+//            if (validate.canExecute()) {
+//                getInstance().getHistory().pushChange(validate);
+//                validate.execute();
+//            } else {
+//                updateErrorString = validate.getError();
+//            }
         }
         GameBoardFacade.getInstance().getLegupUI().getTreePanel().updateError(updateErrorString);
     }

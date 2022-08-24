@@ -34,7 +34,7 @@ public class MergeRule extends Rule {
      */
     @SuppressWarnings("unchecked")
     @Override
-    public String checkRuleRaw(TreeTransition transition) {
+    public String checkRuleRaw(TreeTransition transition, PuzzleElement reference) {
         Board board = transition.getBoard();
         List<TreeNode> mergingNodes = new ArrayList<>();
         List<Board> mergingBoards = new ArrayList<>();
@@ -71,8 +71,8 @@ public class MergeRule extends Rule {
      * otherwise error message
      */
     @Override
-    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
-        return checkRule(transition);
+    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
+        return checkRule(transition, reference);
     }
 
     /**
@@ -82,8 +82,8 @@ public class MergeRule extends Rule {
      * @return null if the child node logically follow from the parent node, otherwise error message
      */
     @Override
-    public String checkRule(TreeTransition transition) {
-        return checkRuleRaw(transition);
+    public String checkRule(TreeTransition transition, PuzzleElement reference) {
+        return checkRuleRaw(transition, reference);
     }
 
     /**
@@ -96,7 +96,7 @@ public class MergeRule extends Rule {
      * otherwise error message
      */
     @Override
-    public String checkRuleAt(TreeTransition transition, PuzzleElement puzzleElement) {
-        return checkRuleRawAt(transition, puzzleElement);
+    public String checkRuleAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
+        return checkRuleRawAt(transition, puzzleElement, reference);
     }
 }

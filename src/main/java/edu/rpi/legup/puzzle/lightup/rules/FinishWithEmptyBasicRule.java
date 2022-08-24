@@ -1,22 +1,27 @@
 package edu.rpi.legup.puzzle.lightup.rules;
 
 import edu.rpi.legup.model.gameboard.Board;
+import edu.rpi.legup.model.gameboard.GABoard;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
 import edu.rpi.legup.model.rules.BasicRule;
+import edu.rpi.legup.model.rules.GARule;
 import edu.rpi.legup.model.tree.TreeNode;
 import edu.rpi.legup.model.tree.TreeTransition;
+import edu.rpi.legup.puzzle.GeneralAlgorithm;
 import edu.rpi.legup.puzzle.lightup.LightUpBoard;
 import edu.rpi.legup.puzzle.lightup.LightUpCell;
 import edu.rpi.legup.puzzle.lightup.LightUpCellType;
 
 import java.awt.*;
 
-public class FinishWithEmptyBasicRule extends BasicRule {
+public class FinishWithEmptyBasicRule extends GARule {
 
     public FinishWithEmptyBasicRule() {
         super("LTUP-BASC-0005", "Finish with Empty",
                 "The remaining unknowns around a block must be empty if the number is satisfied.",
-                "edu/rpi/legup/images/lightup/rules/FinishWithEmpty.png");
+                "edu/rpi/legup/images/lightup/rules/FinishWithEmpty.png",
+                new LightOrEmptyCaseRule(),
+                new TooManyBulbsContradictionRule());
     }
 
     /**
@@ -29,18 +34,24 @@ public class FinishWithEmptyBasicRule extends BasicRule {
      * otherwise error message
      */
     @Override
-    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
-        LightUpBoard initialBoard = (LightUpBoard) transition.getParents().get(0).getBoard();
-        LightUpBoard finalBoard = (LightUpBoard) transition.getBoard();
-        LightUpCell cell = (LightUpCell) finalBoard.getPuzzleElement(puzzleElement);
-        if (cell.getType() != LightUpCellType.EMPTY) {
-            return super.getInvalidUseOfRuleMessage() + ": Modified cells must be empty";
-        }
-
-        if (isForced(initialBoard, cell.getLocation())) {
-            return null;
-        }
-        return super.getInvalidUseOfRuleMessage() + ": Empty is not forced";
+    public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement, PuzzleElement reference) {
+//        LightUpBoard initialBoard = (LightUpBoard) transition.getParents().get(0).getBoard();
+//        LightUpBoard finalBoard = (LightUpBoard) transition.getBoard();
+//        LightUpCell cell = (LightUpCell) finalBoard.getPuzzleElement(puzzleElement);
+//        if (cell.getType() != LightUpCellType.EMPTY) {
+//            return super.getInvalidUseOfRuleMessage() + ": Modified cells must be empty";
+//        }
+//
+//        if (isForced(initialBoard, cell.getLocation())) {
+//            return null;
+//        }
+//        return super.getInvalidUseOfRuleMessage() + ": Empty is not forced";
+        return GeneralAlgorithm.newRunBasic(
+                new LightOrEmptyCaseRule(),
+                new TooManyBulbsContradictionRule(),
+                transition,
+                reference
+        );
     }
 
     private boolean isForced(LightUpBoard board, Point location) {
@@ -75,6 +86,18 @@ public class FinishWithEmptyBasicRule extends BasicRule {
             bulbs++;
         }
         return bulbs == bulbsNeeded;
+    }
+
+    @Override
+    public GABoard getGABoard(Board board) {
+        LightUpBoard lightUpBoard = (LightUpBoard) board;
+        GABoard gaBoard = new GABoard(lightUpBoard, this.caseRule, this.contradictionRule, this);
+        for (PuzzleElement data : lightUpBoard.getPuzzleElements()) {
+            if (((LightUpCell) data).getType() == LightUpCellType.NUMBER) {
+                gaBoard.addPickableElement(data);
+            }
+        }
+        return gaBoard;
     }
 
     /**
