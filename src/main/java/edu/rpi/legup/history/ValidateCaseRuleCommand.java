@@ -83,7 +83,7 @@ public class ValidateCaseRuleCommand extends PuzzleCommand {
                 finalTreeElement = transitionView.getChildView().getTreeElement();
             }
             else {
-                finalTreeElement = null
+                finalTreeElement = null;
             }
         }
         if (finalTreeElement != null) {
