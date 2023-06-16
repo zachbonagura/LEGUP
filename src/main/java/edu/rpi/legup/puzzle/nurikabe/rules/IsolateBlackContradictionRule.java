@@ -38,6 +38,7 @@ public class IsolateBlackContradictionRule extends ContradictionRule {
         NurikabeBoard nurikabeBoard = (NurikabeBoard) board;
         NurikabeCell cell = (NurikabeCell) nurikabeBoard.getPuzzleElement(puzzleElement);
         if (cell.getType() != NurikabeType.BLACK) {
+            System.out.println("NOT Black But Grey");
             return super.getInvalidUseOfRuleMessage() + ": " + this.INVALID_USE_MESSAGE;
         }
 
