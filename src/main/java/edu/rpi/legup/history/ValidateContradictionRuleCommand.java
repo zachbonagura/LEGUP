@@ -86,9 +86,16 @@ public class ValidateContradictionRuleCommand extends PuzzleCommand {
         }
         else {
             TreeTransitionView transitionView = (TreeTransitionView) firstSelectedView;
-            finalTreeElement = transitionView.getChildView().getTreeElement();
+            if (TransitionView.getChildView() != null) {
+                finalTreeElement = transitionView.getChildView().getTreeElement();
+            }
+            else {
+                finalTreeElement = null;
+            }
         }
-        puzzle.notifyBoardListeners(listener -> listener.onTreeElementChanged(finalTreeElement));
+        if (finalTreeElement != null) {
+            puzzle.notifyBoardListeners(listener -> listener.onTreeElementChanged(finalTreeElement));
+        }
         puzzle.notifyTreeListeners(listener -> listener.onTreeSelectionChanged(newSelection));
     }
 
