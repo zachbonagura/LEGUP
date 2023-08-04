@@ -937,6 +937,7 @@ public class ProofEditorPanel extends LegupPanel implements IHistoryListener {
      */
     @Override
     public void onClearHistory() {
+        GameBoardFacade.getInstance().getHistory().clear();
         //undo.setEnabled(false);
 //        toolBarButtons[ToolbarName.UNDO.ordinal()].setEnabled(false);
         //redo.setEnabled(false);

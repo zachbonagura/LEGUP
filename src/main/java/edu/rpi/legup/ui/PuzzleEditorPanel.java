@@ -409,6 +409,7 @@ public class PuzzleEditorPanel extends LegupPanel implements IHistoryListener {
 
     @Override
     public void onClearHistory() {
+        GameBoardFacade.getInstance().getHistory().clear();
         //undo.setEnabled(false);
         //redo.setEnabled(false);
     }
