@@ -123,11 +123,14 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color"><code><a href="#isModifiable" class="member-name-link">isModifiable</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>protected boolean</code></div>
-<div class="col-second odd-row-color"><code><a href="#isModified" class="member-name-link">isModified</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#isModifiableCaseRule" class="member-name-link">isModifiableCaseRule</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>protected boolean</code></div>
-<div class="col-second even-row-color"><code><a href="#isValid" class="member-name-link">isValid</a></code></div>
+<div class="col-second even-row-color"><code><a href="#isModified" class="member-name-link">isModified</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>protected boolean</code></div>
+<div class="col-second odd-row-color"><code><a href="#isValid" class="member-name-link">isValid</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -197,40 +200,50 @@ loadScripts(document, 'script');</script>
 <div class="block">Gets whether this puzzle element is modifiable.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isModified()" class="member-name-link">isModified</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isModifiableCaseRule()" class="member-name-link">isModifiableCaseRule</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets whether the puzzle element has been modified.</div>
+<div class="block">Gets whether this puzzle element is modifiable as a result of a case rule.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isValid()" class="member-name-link">isValid</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isModified()" class="member-name-link">isModified</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Gets whether the puzzle element has been modified.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isValid()" class="member-name-link">isValid</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Get whether this puzzle element data is a valid change according to the rule applied to the
  transition that this puzzle element is contained in.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCasesDepended(int)" class="member-name-link">setCasesDepended</a><wbr>(int&nbsp;cases)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCasesDepended(int)" class="member-name-link">setCasesDepended</a><wbr>(int&nbsp;cases)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets the number of case rules that depend upon the state of this element</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setData(T)" class="member-name-link">setData</a><wbr>(<a href="PuzzleElement.html" title="type parameter in PuzzleElement">T</a>&nbsp;data)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setData(T)" class="member-name-link">setData</a><wbr>(<a href="PuzzleElement.html" title="type parameter in PuzzleElement">T</a>&nbsp;data)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets the data value that represents this puzzle element.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setGiven(boolean)" class="member-name-link">setGiven</a><wbr>(boolean&nbsp;given)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setGiven(boolean)" class="member-name-link">setGiven</a><wbr>(boolean&nbsp;given)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets whether this puzzle element is given</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIndex(int)" class="member-name-link">setIndex</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIndex(int)" class="member-name-link">setIndex</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets the index of this puzzle element</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModifiable(boolean)" class="member-name-link">setModifiable</a><wbr>(boolean&nbsp;isModifiable)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModifiable(boolean)" class="member-name-link">setModifiable</a><wbr>(boolean&nbsp;isModifiable)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets whether this puzzle element is modifiable.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModifiableCaseRule(boolean)" class="member-name-link">setModifiableCaseRule</a><wbr>(boolean&nbsp;isModifiableCaseRule)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets whether this puzzle element is modifiable as a result of a case rule.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModified(boolean)" class="member-name-link">setModified</a><wbr>(boolean&nbsp;isModified)</code></div>
@@ -286,6 +299,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="isModified">
 <h3>isModified</h3>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isModified</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="isModifiableCaseRule">
+<h3>isModifiableCaseRule</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isModifiableCaseRule</span></div>
 </section>
 </li>
 <li>
@@ -388,6 +407,28 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>isModifiable</code> - true if this puzzle element is modifiable, false otherwise</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isModifiableCaseRule()">
+<h3>isModifiableCaseRule</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isModifiableCaseRule</span>()</div>
+<div class="block">Gets whether this puzzle element is modifiable as a result of a case rule.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>true if this puzzle element is modifiable, false otherwise</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setModifiableCaseRule(boolean)">
+<h3>setModifiableCaseRule</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setModifiableCaseRule</span><wbr><span class="parameters">(boolean&nbsp;isModifiableCaseRule)</span></div>
+<div class="block">Sets whether this puzzle element is modifiable as a result of a case rule.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>isModifiableCaseRule</code> - true if this puzzle element is modifiable, false otherwise</dd>
 </dl>
 </section>
 </li>

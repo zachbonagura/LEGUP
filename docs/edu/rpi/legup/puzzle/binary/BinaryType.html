@@ -97,6 +97,12 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public enum </span><span class="element-name type-name-label">BinaryType</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;<a href="BinaryType.html" title="enum class in edu.rpi.legup.puzzle.binary">BinaryType</a>&gt;</span></div>
+<div class="block">Enum representing the possible states of a binary puzzle cell
+
+ The states include:
+ - ZERO: Represents a cell with a value of 0
+ - ONE: Represents a cell with a value of 1
+ - UNKNOWN: Represents an empty cell</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -139,7 +145,10 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toValue()" class="member-name-link">toValue</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">The `toValue` method returns the ordinal value of the enum constant,
+ which can be used to convert the enum to an integer representation.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BinaryType.html" title="enum class in edu.rpi.legup.puzzle.binary">BinaryType</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#valueOf(java.lang.String)" class="member-name-link">valueOf</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -232,6 +241,8 @@ not permitted.)</div>
 <section class="detail" id="toValue()">
 <h3>toValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">toValue</span>()</div>
+<div class="block">The `toValue` method returns the ordinal value of the enum constant,
+ which can be used to convert the enum to an integer representation.</div>
 </section>
 </li>
 </ul>

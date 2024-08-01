@@ -131,19 +131,25 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#acceptsRowsAndColumnsInput()" class="member-name-link">acceptsRowsAndColumnsInput</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Determines if puzzle uses row and column input</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#acceptsTextInput()" class="member-name-link">acceptsTextInput</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Determines if puzzle uses text input</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initializeBoard(int,int)" class="member-name-link">initializeBoard</a><wbr>(int&nbsp;rows,
  int&nbsp;columns)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Creates the board for building</div>
+<div class="block">Creates an empty board for building</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initializeBoard(java.lang.String%5B%5D)" class="member-name-link">initializeBoard</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;statements)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Initializes a board with text</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initializeBoard(org.w3c.dom.Node)" class="member-name-link">initializeBoard</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;node)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -187,9 +193,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="acceptsRowsAndColumnsInput()">
 <h3>acceptsRowsAndColumnsInput</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">acceptsRowsAndColumnsInput</span>()</div>
+<div class="block">Determines if puzzle uses row and column input</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../model/PuzzleImporter.html#acceptsRowsAndColumnsInput()">acceptsRowsAndColumnsInput</a></code>&nbsp;in class&nbsp;<code><a href="../../model/PuzzleImporter.html" title="class in edu.rpi.legup.model">PuzzleImporter</a></code></dd>
+<dt>Returns:</dt>
+<dd>true if row and column input is used, false otherwise</dd>
 </dl>
 </section>
 </li>
@@ -197,9 +206,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="acceptsTextInput()">
 <h3>acceptsTextInput</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">acceptsTextInput</span>()</div>
+<div class="block">Determines if puzzle uses text input</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../model/PuzzleImporter.html#acceptsTextInput()">acceptsTextInput</a></code>&nbsp;in class&nbsp;<code><a href="../../model/PuzzleImporter.html" title="class in edu.rpi.legup.model">PuzzleImporter</a></code></dd>
+<dt>Returns:</dt>
+<dd>true if text input is used, false otherwise</dd>
 </dl>
 </section>
 </li>
@@ -208,14 +220,15 @@ loadScripts(document, 'script');</script>
 <h3>initializeBoard</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">initializeBoard</span><wbr><span class="parameters">(int&nbsp;rows,
  int&nbsp;columns)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="../../model/PuzzleImporter.html#initializeBoard(int,int)">PuzzleImporter</a></code></span></div>
-<div class="block">Creates the board for building</div>
+<div class="block">Creates an empty board for building</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../model/PuzzleImporter.html#initializeBoard(int,int)">initializeBoard</a></code>&nbsp;in class&nbsp;<code><a href="../../model/PuzzleImporter.html" title="class in edu.rpi.legup.model">PuzzleImporter</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>rows</code> - number of rows on the puzzle</dd>
-<dd><code>columns</code> - number of columns on the puzzle</dd>
+<dd><code>rows</code> - the number of rows on the board</dd>
+<dd><code>columns</code> - the number of columns on the board</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a></code> - if board can not be created</dd>
 </dl>
 </section>
 </li>
@@ -240,11 +253,14 @@ loadScripts(document, 'script');</script>
 <h3>initializeBoard</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">initializeBoard</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;statements)</span>
                      throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link">UnsupportedOperationException</a></span></div>
+<div class="block">Initializes a board with text</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../model/PuzzleImporter.html#initializeBoard(java.lang.String%5B%5D)">initializeBoard</a></code>&nbsp;in class&nbsp;<code><a href="../../model/PuzzleImporter.html" title="class in edu.rpi.legup.model">PuzzleImporter</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>statements</code> - the text being used</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link">UnsupportedOperationException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link">UnsupportedOperationException</a></code> - Binary does not use text input</dd>
 </dl>
 </section>
 </li>

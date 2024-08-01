@@ -174,7 +174,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(edu.rpi.legup.puzzle.binary.BinaryBoard)" class="member-name-link">BinaryView</a><wbr>(<a href="BinaryBoard.html" title="class in edu.rpi.legup.puzzle.binary">BinaryBoard</a>&nbsp;board)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Creates and arranges the visual components for each cell in the binary puzzle.</div>
+</div>
 </div>
 </section>
 </li>
@@ -221,6 +223,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(edu.rpi.legup.puzzle.binary.BinaryBoard)">
 <h3>BinaryView</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">BinaryView</span><wbr><span class="parameters">(<a href="BinaryBoard.html" title="class in edu.rpi.legup.puzzle.binary">BinaryBoard</a>&nbsp;board)</span></div>
+<div class="block">Creates and arranges the visual components for each cell in the binary puzzle. Initializes
+ the view by setting up the board controller, binary controller, and the grid dimensions.
+ For each cell in the BinaryBoard, it creates a corresponding BinaryElementView, sets its index,
+ size, and location, and adds it to the list of element views to be displayed.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>board</code> - The BinaryBoard representing the current state of the binary puzzle</dd>
+</dl>
 </section>
 </li>
 </ul>

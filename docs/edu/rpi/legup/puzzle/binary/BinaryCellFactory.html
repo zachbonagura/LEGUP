@@ -124,13 +124,13 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#exportCell(org.w3c.dom.Document,edu.rpi.legup.model.gameboard.PuzzleElement)" class="member-name-link">exportCell</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Document.html" title="class or interface in org.w3c.dom" class="external-link">Document</a>&nbsp;document,
  <a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&nbsp;puzzleElement)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Creates a xml document <a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard"><code>PuzzleElement</code></a> from a cell for exporting.</div>
+<div class="block">Creates a xml document puzzleElement from a cell for exporting</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BinaryCell.html" title="class in edu.rpi.legup.puzzle.binary">BinaryCell</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#importCell(org.w3c.dom.Node,edu.rpi.legup.model.gameboard.Board)" class="member-name-link">importCell</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;node,
  <a href="../../model/gameboard/Board.html" title="class in edu.rpi.legup.model.gameboard">Board</a>&nbsp;board)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Creates a <a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard"><code>PuzzleElement</code></a> based on the xml document Node and adds it to the board.</div>
+<div class="block">Creates a puzzleElement based on the xml document Node and adds it to the board</div>
 </div>
 </div>
 </div>
@@ -169,8 +169,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BinaryCell.html" title="class in edu.rpi.legup.puzzle.binary">BinaryCell</a></span>&nbsp;<span class="element-name">importCell</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;node,
  <a href="../../model/gameboard/Board.html" title="class in edu.rpi.legup.model.gameboard">Board</a>&nbsp;board)</span>
                       throws <span class="exceptions"><a href="../../save/InvalidFileFormatException.html" title="class in edu.rpi.legup.save">InvalidFileFormatException</a></span></div>
-<div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="../../model/gameboard/ElementFactory.html#importCell(org.w3c.dom.Node,edu.rpi.legup.model.gameboard.Board)">ElementFactory</a></code></span></div>
-<div class="block">Creates a <a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard"><code>PuzzleElement</code></a> based on the xml document Node and adds it to the board.</div>
+<div class="block">Creates a puzzleElement based on the xml document Node and adds it to the board</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../model/gameboard/ElementFactory.html#importCell(org.w3c.dom.Node,edu.rpi.legup.model.gameboard.Board)">importCell</a></code>&nbsp;in class&nbsp;<code><a href="../../model/gameboard/ElementFactory.html" title="class in edu.rpi.legup.model.gameboard">ElementFactory</a></code></dd>
@@ -180,8 +179,7 @@ loadScripts(document, 'script');</script>
 <dt>Returns:</dt>
 <dd>newly created cell from the xml document Node</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../../save/InvalidFileFormatException.html" title="class in edu.rpi.legup.save">InvalidFileFormatException</a></code> - thrown if the xml node is invalid for the specific puzzle
-     element</dd>
+<dd><code><a href="../../save/InvalidFileFormatException.html" title="class in edu.rpi.legup.save">InvalidFileFormatException</a></code> - if file is invalid</dd>
 </dl>
 </section>
 </li>
@@ -190,8 +188,7 @@ loadScripts(document, 'script');</script>
 <h3>exportCell</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Element.html" title="class or interface in org.w3c.dom" class="external-link">Element</a></span>&nbsp;<span class="element-name">exportCell</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Document.html" title="class or interface in org.w3c.dom" class="external-link">Document</a>&nbsp;document,
  <a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&nbsp;puzzleElement)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="../../model/gameboard/ElementFactory.html#exportCell(org.w3c.dom.Document,edu.rpi.legup.model.gameboard.PuzzleElement)">ElementFactory</a></code></span></div>
-<div class="block">Creates a xml document <a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard"><code>PuzzleElement</code></a> from a cell for exporting.</div>
+<div class="block">Creates a xml document puzzleElement from a cell for exporting</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../model/gameboard/ElementFactory.html#exportCell(org.w3c.dom.Document,edu.rpi.legup.model.gameboard.PuzzleElement)">exportCell</a></code>&nbsp;in class&nbsp;<code><a href="../../model/gameboard/ElementFactory.html" title="class in edu.rpi.legup.model.gameboard">ElementFactory</a></code></dd>

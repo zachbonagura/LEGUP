@@ -107,7 +107,7 @@ loadScripts(document, 'script');</script>
 <code><a href="../../model/gameboard/GridCell.html#location">location</a></code></div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-edu.rpi.legup.model.gameboard.PuzzleElement">Fields inherited from class&nbsp;edu.rpi.legup.model.gameboard.<a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a></h3>
-<code><a href="../../model/gameboard/PuzzleElement.html#casesDepended">casesDepended</a>, <a href="../../model/gameboard/PuzzleElement.html#data">data</a>, <a href="../../model/gameboard/PuzzleElement.html#index">index</a>, <a href="../../model/gameboard/PuzzleElement.html#isGiven">isGiven</a>, <a href="../../model/gameboard/PuzzleElement.html#isModifiable">isModifiable</a>, <a href="../../model/gameboard/PuzzleElement.html#isModified">isModified</a>, <a href="../../model/gameboard/PuzzleElement.html#isValid">isValid</a></code></div>
+<code><a href="../../model/gameboard/PuzzleElement.html#casesDepended">casesDepended</a>, <a href="../../model/gameboard/PuzzleElement.html#data">data</a>, <a href="../../model/gameboard/PuzzleElement.html#index">index</a>, <a href="../../model/gameboard/PuzzleElement.html#isGiven">isGiven</a>, <a href="../../model/gameboard/PuzzleElement.html#isModifiable">isModifiable</a>, <a href="../../model/gameboard/PuzzleElement.html#isModifiableCaseRule">isModifiableCaseRule</a>, <a href="../../model/gameboard/PuzzleElement.html#isModified">isModified</a>, <a href="../../model/gameboard/PuzzleElement.html#isValid">isValid</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -118,9 +118,11 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,java.awt.Point)" class="member-name-link">BinaryCell</a><wbr>(int&nbsp;valueInt,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,java.awt.Point)" class="member-name-link">BinaryCell</a><wbr>(int&nbsp;value,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/Point.html" title="class or interface in java.awt" class="external-link">Point</a>&nbsp;location)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">BinaryCell Constructor - creates a BinaryCell from the specified value and location</div>
+</div>
 </div>
 </section>
 </li>
@@ -138,11 +140,19 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BinaryCell.html" title="class in edu.rpi.legup.puzzle.binary">BinaryCell</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copy()" class="member-name-link">copy</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Performs a deep copy on the grid cell</div>
+<div class="block">Performs a deep copy on the BinaryCell</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BinaryType.html" title="enum class in edu.rpi.legup.puzzle.binary">BinaryType</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Gets the type of this BinaryCell</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setType(edu.rpi.legup.model.elements.Element,java.awt.event.MouseEvent)" class="member-name-link">setType</a><wbr>(<a href="../../model/elements/Element.html" title="class in edu.rpi.legup.model.elements">Element</a>&nbsp;e,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/event/MouseEvent.html" title="class or interface in java.awt.event" class="external-link">MouseEvent</a>&nbsp;m)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets the type of this BinaryCell</div>
+</div>
 </div>
 </div>
 </div>
@@ -151,7 +161,7 @@ loadScripts(document, 'script');</script>
 <code><a href="../../model/gameboard/GridCell.html#getLocation()">getLocation</a>, <a href="../../model/gameboard/GridCell.html#setLocation(java.awt.Point)">setLocation</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-edu.rpi.legup.model.gameboard.PuzzleElement">Methods inherited from class&nbsp;edu.rpi.legup.model.gameboard.<a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a></h3>
-<code><a href="../../model/gameboard/PuzzleElement.html#equalsData(edu.rpi.legup.model.gameboard.PuzzleElement)">equalsData</a>, <a href="../../model/gameboard/PuzzleElement.html#getCasesDepended()">getCasesDepended</a>, <a href="../../model/gameboard/PuzzleElement.html#getData()">getData</a>, <a href="../../model/gameboard/PuzzleElement.html#getIndex()">getIndex</a>, <a href="../../model/gameboard/PuzzleElement.html#isGiven()">isGiven</a>, <a href="../../model/gameboard/PuzzleElement.html#isModifiable()">isModifiable</a>, <a href="../../model/gameboard/PuzzleElement.html#isModified()">isModified</a>, <a href="../../model/gameboard/PuzzleElement.html#isValid()">isValid</a>, <a href="../../model/gameboard/PuzzleElement.html#setCasesDepended(int)">setCasesDepended</a>, <a href="../../model/gameboard/PuzzleElement.html#setData(T)">setData</a>, <a href="../../model/gameboard/PuzzleElement.html#setGiven(boolean)">setGiven</a>, <a href="../../model/gameboard/PuzzleElement.html#setIndex(int)">setIndex</a>, <a href="../../model/gameboard/PuzzleElement.html#setModifiable(boolean)">setModifiable</a>, <a href="../../model/gameboard/PuzzleElement.html#setModified(boolean)">setModified</a>, <a href="../../model/gameboard/PuzzleElement.html#setType(edu.rpi.legup.model.elements.Element,java.awt.event.MouseEvent)">setType</a>, <a href="../../model/gameboard/PuzzleElement.html#setValid(boolean)">setValid</a></code></div>
+<code><a href="../../model/gameboard/PuzzleElement.html#equalsData(edu.rpi.legup.model.gameboard.PuzzleElement)">equalsData</a>, <a href="../../model/gameboard/PuzzleElement.html#getCasesDepended()">getCasesDepended</a>, <a href="../../model/gameboard/PuzzleElement.html#getData()">getData</a>, <a href="../../model/gameboard/PuzzleElement.html#getIndex()">getIndex</a>, <a href="../../model/gameboard/PuzzleElement.html#isGiven()">isGiven</a>, <a href="../../model/gameboard/PuzzleElement.html#isModifiable()">isModifiable</a>, <a href="../../model/gameboard/PuzzleElement.html#isModifiableCaseRule()">isModifiableCaseRule</a>, <a href="../../model/gameboard/PuzzleElement.html#isModified()">isModified</a>, <a href="../../model/gameboard/PuzzleElement.html#isValid()">isValid</a>, <a href="../../model/gameboard/PuzzleElement.html#setCasesDepended(int)">setCasesDepended</a>, <a href="../../model/gameboard/PuzzleElement.html#setData(T)">setData</a>, <a href="../../model/gameboard/PuzzleElement.html#setGiven(boolean)">setGiven</a>, <a href="../../model/gameboard/PuzzleElement.html#setIndex(int)">setIndex</a>, <a href="../../model/gameboard/PuzzleElement.html#setModifiable(boolean)">setModifiable</a>, <a href="../../model/gameboard/PuzzleElement.html#setModifiableCaseRule(boolean)">setModifiableCaseRule</a>, <a href="../../model/gameboard/PuzzleElement.html#setModified(boolean)">setModified</a>, <a href="../../model/gameboard/PuzzleElement.html#setValid(boolean)">setValid</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -169,8 +179,14 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="&lt;init&gt;(int,java.awt.Point)">
 <h3>BinaryCell</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">BinaryCell</span><wbr><span class="parameters">(int&nbsp;valueInt,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">BinaryCell</span><wbr><span class="parameters">(int&nbsp;value,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/Point.html" title="class or interface in java.awt" class="external-link">Point</a>&nbsp;location)</span></div>
+<div class="block">BinaryCell Constructor - creates a BinaryCell from the specified value and location</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - value of the BinaryCell</dd>
+<dd><code>location</code> - position of the BinaryCell</dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -185,19 +201,37 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BinaryType.html" title="enum class in edu.rpi.legup.puzzle.binary">BinaryType</a></span>&nbsp;<span class="element-name">getType</span>()</div>
+<div class="block">Gets the type of this BinaryCell</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>type of BinaryCell</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="copy()">
 <h3>copy</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BinaryCell.html" title="class in edu.rpi.legup.puzzle.binary">BinaryCell</a></span>&nbsp;<span class="element-name">copy</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="../../model/gameboard/GridCell.html#copy()">GridCell</a></code></span></div>
-<div class="block">Performs a deep copy on the grid cell</div>
+<div class="block">Performs a deep copy on the BinaryCell</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="../../model/gameboard/GridCell.html#copy()">copy</a></code>&nbsp;in class&nbsp;<code><a href="../../model/gameboard/GridCell.html" title="class in edu.rpi.legup.model.gameboard">GridCell</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></dd>
 <dt>Returns:</dt>
-<dd>a new copy of the grid cell that is independent of this one</dd>
+<dd>a new copy of the BinaryCell that is independent of this one</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setType(edu.rpi.legup.model.elements.Element,java.awt.event.MouseEvent)">
+<h3>setType</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setType</span><wbr><span class="parameters">(<a href="../../model/elements/Element.html" title="class in edu.rpi.legup.model.elements">Element</a>&nbsp;e,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/event/MouseEvent.html" title="class or interface in java.awt.event" class="external-link">MouseEvent</a>&nbsp;m)</span></div>
+<div class="block">Sets the type of this BinaryCell</div>
+<dl class="notes">
+<dt>Overrides:</dt>
+<dd><code><a href="../../model/gameboard/PuzzleElement.html#setType(edu.rpi.legup.model.elements.Element,java.awt.event.MouseEvent)">setType</a></code>&nbsp;in class&nbsp;<code><a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></dd>
+<dt>Parameters:</dt>
+<dd><code>e</code> - element to set the type of this binary cell to</dd>
 </dl>
 </section>
 </li>

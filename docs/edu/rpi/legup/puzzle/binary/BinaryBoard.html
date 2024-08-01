@@ -140,26 +140,34 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BinaryBoard.html" title="class in edu.rpi.legup.puzzle.binary">BinaryBoard</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copy()" class="member-name-link">copy</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Performs a deep copy of the Board</div>
+<div class="block">Get a copy of the binary board</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BinaryCell.html" title="class in edu.rpi.legup.puzzle.binary">BinaryCell</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCell(int,int)" class="member-name-link">getCell</a><wbr>(int&nbsp;x,
  int&nbsp;y)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets a <a href="../../model/gameboard/GridCell.html" title="class in edu.rpi.legup.model.gameboard"><code>GridCell</code></a> from the board.</div>
+<div class="block">Gets the cell at the (x,y) position</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="BinaryCell.html" title="class in edu.rpi.legup.puzzle.binary">BinaryCell</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCol(int)" class="member-name-link">getCol</a><wbr>(int&nbsp;colNum)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getColCells(int)" class="member-name-link">getColCells</a><wbr>(int&nbsp;colNum)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get all the binary cells in a column</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a><wbr>&lt;<a href="BinaryType.html" title="enum class in edu.rpi.legup.puzzle.binary">BinaryType</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getColTypes(int)" class="member-name-link">getColTypes</a><wbr>(int&nbsp;colNum)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get all the binary types in a column</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="BinaryCell.html" title="class in edu.rpi.legup.puzzle.binary">BinaryCell</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRowCells(int)" class="member-name-link">getRowCells</a><wbr>(int&nbsp;rowNum)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get all the binary cells in a row</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a><wbr>&lt;<a href="BinaryType.html" title="enum class in edu.rpi.legup.puzzle.binary">BinaryType</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRowTypes(int)" class="member-name-link">getRowTypes</a><wbr>(int&nbsp;rowNum)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get all the binary types in a row</div>
+</div>
 </div>
 </div>
 </div>
@@ -209,16 +217,15 @@ loadScripts(document, 'script');</script>
 <h3>getCell</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BinaryCell.html" title="class in edu.rpi.legup.puzzle.binary">BinaryCell</a></span>&nbsp;<span class="element-name">getCell</span><wbr><span class="parameters">(int&nbsp;x,
  int&nbsp;y)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="../../model/gameboard/GridBoard.html#getCell(int,int)">GridBoard</a></code></span></div>
-<div class="block">Gets a <a href="../../model/gameboard/GridCell.html" title="class in edu.rpi.legup.model.gameboard"><code>GridCell</code></a> from the board.</div>
+<div class="block">Gets the cell at the (x,y) position</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="../../model/gameboard/GridBoard.html#getCell(int,int)">getCell</a></code>&nbsp;in class&nbsp;<code><a href="../../model/gameboard/GridBoard.html" title="class in edu.rpi.legup.model.gameboard">GridBoard</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>x</code> - x location of the cell</dd>
-<dd><code>y</code> - y location of the cell</dd>
+<dd><code>x</code> - x-coordinate</dd>
+<dd><code>y</code> - y-coordinate</dd>
 <dt>Returns:</dt>
-<dd>grid cell at location (x, y)</dd>
+<dd>BinaryCell cell at (x,y)</dd>
 </dl>
 </section>
 </li>
@@ -226,37 +233,64 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getRowCells(int)">
 <h3>getRowCells</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="BinaryCell.html" title="class in edu.rpi.legup.puzzle.binary">BinaryCell</a>&gt;</span>&nbsp;<span class="element-name">getRowCells</span><wbr><span class="parameters">(int&nbsp;rowNum)</span></div>
+<div class="block">Get all the binary cells in a row</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>rowNum</code> - row number</dd>
+<dt>Returns:</dt>
+<dd>set of all binary cells in specified rowNum</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getColCells(int)">
+<h3>getColCells</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="BinaryCell.html" title="class in edu.rpi.legup.puzzle.binary">BinaryCell</a>&gt;</span>&nbsp;<span class="element-name">getColCells</span><wbr><span class="parameters">(int&nbsp;colNum)</span></div>
+<div class="block">Get all the binary cells in a column</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>colNum</code> - column number</dd>
+<dt>Returns:</dt>
+<dd>set of all binary cells in specified colNum</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getRowTypes(int)">
 <h3>getRowTypes</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="BinaryType.html" title="enum class in edu.rpi.legup.puzzle.binary">BinaryType</a>&gt;</span>&nbsp;<span class="element-name">getRowTypes</span><wbr><span class="parameters">(int&nbsp;rowNum)</span></div>
+<div class="block">Get all the binary types in a row</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>rowNum</code> - row number</dd>
+<dt>Returns:</dt>
+<dd>ArrayList of all binary types in specified rowNum</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getColTypes(int)">
 <h3>getColTypes</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="BinaryType.html" title="enum class in edu.rpi.legup.puzzle.binary">BinaryType</a>&gt;</span>&nbsp;<span class="element-name">getColTypes</span><wbr><span class="parameters">(int&nbsp;colNum)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getCol(int)">
-<h3>getCol</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="BinaryCell.html" title="class in edu.rpi.legup.puzzle.binary">BinaryCell</a>&gt;</span>&nbsp;<span class="element-name">getCol</span><wbr><span class="parameters">(int&nbsp;colNum)</span></div>
+<div class="block">Get all the binary types in a column</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>colNum</code> - column number</dd>
+<dt>Returns:</dt>
+<dd>ArrayList of all binary types in specified colNum</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="copy()">
 <h3>copy</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BinaryBoard.html" title="class in edu.rpi.legup.puzzle.binary">BinaryBoard</a></span>&nbsp;<span class="element-name">copy</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="../../model/gameboard/GridBoard.html#copy()">GridBoard</a></code></span></div>
-<div class="block">Performs a deep copy of the Board</div>
+<div class="block">Get a copy of the binary board</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="../../model/gameboard/GridBoard.html#copy()">copy</a></code>&nbsp;in class&nbsp;<code><a href="../../model/gameboard/GridBoard.html" title="class in edu.rpi.legup.model.gameboard">GridBoard</a></code></dd>
 <dt>Returns:</dt>
-<dd>a new copy of the board that is independent of this one</dd>
+<dd>copy of current BinaryBoard</dd>
 </dl>
 </section>
 </li>

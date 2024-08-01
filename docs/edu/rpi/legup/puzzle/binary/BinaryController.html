@@ -136,7 +136,13 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#changeCell(java.awt.event.MouseEvent,edu.rpi.legup.model.gameboard.PuzzleElement)" class="member-name-link">changeCell</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/event/MouseEvent.html" title="class or interface in java.awt.event" class="external-link">MouseEvent</a>&nbsp;e,
  <a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&nbsp;data)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Handles cell state changes in the binary puzzle when a mouse event occurs
+ If the left mouse button is clicked:
+   - If the control key is held down, shows a context menu at the mouse position
+   - Otherwise, toggles the cell data state between 0, 1, and 2 in a cyclic manner
+ If the right mouse button is clicked, the cell state is also toggled between 2, 1, and 0</div>
+</div>
 </div>
 </div>
 </div>
@@ -176,9 +182,17 @@ loadScripts(document, 'script');</script>
 <h3>changeCell</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">changeCell</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/event/MouseEvent.html" title="class or interface in java.awt.event" class="external-link">MouseEvent</a>&nbsp;e,
  <a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&nbsp;data)</span></div>
+<div class="block">Handles cell state changes in the binary puzzle when a mouse event occurs
+ If the left mouse button is clicked:
+   - If the control key is held down, shows a context menu at the mouse position
+   - Otherwise, toggles the cell data state between 0, 1, and 2 in a cyclic manner
+ If the right mouse button is clicked, the cell state is also toggled between 2, 1, and 0</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="../../controller/ElementController.html#changeCell(java.awt.event.MouseEvent,edu.rpi.legup.model.gameboard.PuzzleElement)">changeCell</a></code>&nbsp;in class&nbsp;<code><a href="../../controller/ElementController.html" title="class in edu.rpi.legup.controller">ElementController</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>e</code> - MouseEvent triggered by the user interaction</dd>
+<dd><code>data</code> - PuzzleElement representing the cell being modified</dd>
 </dl>
 </section>
 </li>
