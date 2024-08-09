@@ -91,12 +91,19 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><code>T</code> - the type of data held by the GridCell</dd>
+</dl>
+<dl class="notes">
 <dt>Direct Known Subclasses:</dt>
 <dd><code><a href="../../puzzle/battleship/BattleshipCell.html" title="class in edu.rpi.legup.puzzle.battleship">BattleshipCell</a></code>, <code><a href="../../puzzle/binary/BinaryCell.html" title="class in edu.rpi.legup.puzzle.binary">BinaryCell</a></code>, <code><a href="../../puzzle/fillapix/FillapixCell.html" title="class in edu.rpi.legup.puzzle.fillapix">FillapixCell</a></code>, <code><a href="../../puzzle/heyawake/HeyawakeCell.html" title="class in edu.rpi.legup.puzzle.heyawake">HeyawakeCell</a></code>, <code><a href="../../puzzle/lightup/LightUpCell.html" title="class in edu.rpi.legup.puzzle.lightup">LightUpCell</a></code>, <code><a href="../../puzzle/masyu/MasyuCell.html" title="class in edu.rpi.legup.puzzle.masyu">MasyuCell</a></code>, <code><a href="../../puzzle/minesweeper/MinesweeperCell.html" title="class in edu.rpi.legup.puzzle.minesweeper">MinesweeperCell</a></code>, <code><a href="../../puzzle/nurikabe/NurikabeCell.html" title="class in edu.rpi.legup.puzzle.nurikabe">NurikabeCell</a></code>, <code><a href="../../puzzle/shorttruthtable/ShortTruthTableCell.html" title="class in edu.rpi.legup.puzzle.shorttruthtable">ShortTruthTableCell</a></code>, <code><a href="../../puzzle/skyscrapers/SkyscrapersCell.html" title="class in edu.rpi.legup.puzzle.skyscrapers">SkyscrapersCell</a></code>, <code><a href="../../puzzle/starbattle/StarBattleCell.html" title="class in edu.rpi.legup.puzzle.starbattle">StarBattleCell</a></code>, <code><a href="../../puzzle/sudoku/SudokuCell.html" title="class in edu.rpi.legup.puzzle.sudoku">SudokuCell</a></code>, <code><a href="../../puzzle/thermometer/ThermometerCell.html" title="class in edu.rpi.legup.puzzle.thermometer">ThermometerCell</a></code>, <code><a href="../../puzzle/treetent/TreeTentCell.html" title="class in edu.rpi.legup.puzzle.treetent">TreeTentCell</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">GridCell&lt;T&gt;</span>
 <span class="extends-implements">extends <a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&lt;T&gt;</span></div>
+<div class="block">GridCell represents a cell within a grid-based board. It holds data of type T and tracks its location
+ on the board using a <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/Point.html" title="class or interface in java.awt" class="external-link"><code>Point</code></a>. The class extends from PuzzleElement and supports deep copying of
+ the grid cell.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">

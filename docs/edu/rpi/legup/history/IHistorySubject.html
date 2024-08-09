@@ -91,6 +91,9 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">IHistorySubject</span></div>
+<div class="block">The IHistorySubject interface defines methods for managing and notifying listeners
+ about changes in the command history. Implementations of this interface can add, remove,
+ and notify history listeners.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -108,17 +111,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#addHistoryListener(edu.rpi.legup.history.IHistoryListener)" class="member-name-link">addHistoryListener</a><wbr>(<a href="IHistoryListener.html" title="interface in edu.rpi.legup.history">IHistoryListener</a>&nbsp;listener)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Adds a history listener</div>
+<div class="block">Adds a history listener to receive updates about changes in the command history.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#notifyHistoryListeners(java.util.function.Consumer)" class="member-name-link">notifyHistoryListeners</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;? super <a href="IHistoryListener.html" title="interface in edu.rpi.legup.history">IHistoryListener</a>&gt;&nbsp;algorithm)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Notifies listeners</div>
+<div class="block">Notifies all registered listeners about a change in the command history.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#removeHistoryListener(edu.rpi.legup.history.IHistoryListener)" class="member-name-link">removeHistoryListener</a><wbr>(<a href="IHistoryListener.html" title="interface in edu.rpi.legup.history">IHistoryListener</a>&nbsp;listener)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Removes a history listener</div>
+<div class="block">Removes a history listener, so it no longer receives updates about changes in the command history.</div>
 </div>
 </div>
 </div>
@@ -138,10 +141,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="addHistoryListener(edu.rpi.legup.history.IHistoryListener)">
 <h3>addHistoryListener</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">addHistoryListener</span><wbr><span class="parameters">(<a href="IHistoryListener.html" title="interface in edu.rpi.legup.history">IHistoryListener</a>&nbsp;listener)</span></div>
-<div class="block">Adds a history listener</div>
+<div class="block">Adds a history listener to receive updates about changes in the command history.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>listener</code> - listener to add</dd>
+<dd><code>listener</code> - the listener to add</dd>
 </dl>
 </section>
 </li>
@@ -149,10 +152,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="removeHistoryListener(edu.rpi.legup.history.IHistoryListener)">
 <h3>removeHistoryListener</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">removeHistoryListener</span><wbr><span class="parameters">(<a href="IHistoryListener.html" title="interface in edu.rpi.legup.history">IHistoryListener</a>&nbsp;listener)</span></div>
-<div class="block">Removes a history listener</div>
+<div class="block">Removes a history listener, so it no longer receives updates about changes in the command history.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>listener</code> - listener to remove</dd>
+<dd><code>listener</code> - the listener to remove</dd>
 </dl>
 </section>
 </li>
@@ -160,10 +163,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="notifyHistoryListeners(java.util.function.Consumer)">
 <h3>notifyHistoryListeners</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">notifyHistoryListeners</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;? super <a href="IHistoryListener.html" title="interface in edu.rpi.legup.history">IHistoryListener</a>&gt;&nbsp;algorithm)</span></div>
-<div class="block">Notifies listeners</div>
+<div class="block">Notifies all registered listeners about a change in the command history.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>algorithm</code> - algorithm to notify the listeners with</dd>
+<dd><code>algorithm</code> - a Consumer function that takes an IHistoryListener and performs some action with it</dd>
 </dl>
 </section>
 </li>

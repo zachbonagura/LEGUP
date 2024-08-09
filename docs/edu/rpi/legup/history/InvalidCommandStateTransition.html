@@ -101,6 +101,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">InvalidCommandStateTransition</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a></span></div>
+<div class="block">The InvalidCommandStateTransition exception is thrown when an invalid state transition
+ is attempted on a PuzzleCommand</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -123,7 +125,9 @@ loadScripts(document, 'script');</script>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(edu.rpi.legup.history.PuzzleCommand,edu.rpi.legup.history.CommandState,edu.rpi.legup.history.CommandState)" class="member-name-link">InvalidCommandStateTransition</a><wbr>(<a href="PuzzleCommand.html" title="class in edu.rpi.legup.history">PuzzleCommand</a>&nbsp;puzzleCommand,
  <a href="CommandState.html" title="enum class in edu.rpi.legup.history">CommandState</a>&nbsp;from,
  <a href="CommandState.html" title="enum class in edu.rpi.legup.history">CommandState</a>&nbsp;to)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Constructs a new InvalidCommandStateTransition exception with a detailed message</div>
+</div>
 </div>
 </section>
 </li>
@@ -154,6 +158,13 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">InvalidCommandStateTransition</span><wbr><span class="parameters">(<a href="PuzzleCommand.html" title="class in edu.rpi.legup.history">PuzzleCommand</a>&nbsp;puzzleCommand,
  <a href="CommandState.html" title="enum class in edu.rpi.legup.history">CommandState</a>&nbsp;from,
  <a href="CommandState.html" title="enum class in edu.rpi.legup.history">CommandState</a>&nbsp;to)</span></div>
+<div class="block">Constructs a new InvalidCommandStateTransition exception with a detailed message</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>puzzleCommand</code> - the PuzzleCommand involved in the invalid transition</dd>
+<dd><code>from</code> - the state from which the transition was attempted</dd>
+<dd><code>to</code> - the state to which the transition was attempted</dd>
+</dl>
 </section>
 </li>
 </ul>

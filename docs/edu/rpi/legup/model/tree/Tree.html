@@ -91,6 +91,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Tree</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Represents a tree structure in a puzzle.
+ The tree consists of <a href="TreeNode.html" title="class in edu.rpi.legup.model.tree"><code>TreeNode</code></a>s and <a href="TreeTransition.html" title="class in edu.rpi.legup.model.tree"><code>TreeTransition</code></a>s
+ and allows adding, removing, and validating elements.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -126,54 +129,61 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TreeTransition.html" title="class in edu.rpi.legup.model.tree">TreeTransition</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addNewTransition(edu.rpi.legup.model.tree.TreeNode)" class="member-name-link">addNewTransition</a><wbr>(<a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a>&nbsp;treeNode)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addNode(edu.rpi.legup.model.tree.TreeTransition)" class="member-name-link">addNode</a><wbr>(<a href="TreeTransition.html" title="class in edu.rpi.legup.model.tree">TreeTransition</a>&nbsp;transition)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TreeElement.html" title="class in edu.rpi.legup.model.tree">TreeElement</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTreeElement(edu.rpi.legup.model.tree.TreeElement)" class="member-name-link">addTreeElement</a><wbr>(<a href="TreeElement.html" title="class in edu.rpi.legup.model.tree">TreeElement</a>&nbsp;element)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds a new transition to the specified node.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TreeElement.html" title="class in edu.rpi.legup.model.tree">TreeElement</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTreeElement(edu.rpi.legup.model.tree.TreeNode,edu.rpi.legup.model.tree.TreeTransition)" class="member-name-link">addTreeElement</a><wbr>(<a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a>&nbsp;treeNode,
- <a href="TreeTransition.html" title="class in edu.rpi.legup.model.tree">TreeTransition</a>&nbsp;transition)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TreeElement.html" title="class in edu.rpi.legup.model.tree">TreeElement</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTreeElement(edu.rpi.legup.model.tree.TreeTransition,edu.rpi.legup.model.tree.TreeNode)" class="member-name-link">addTreeElement</a><wbr>(<a href="TreeTransition.html" title="class in edu.rpi.legup.model.tree">TreeTransition</a>&nbsp;transition,
- <a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a>&nbsp;treeNode)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="TreeElement.html" title="class in edu.rpi.legup.model.tree">TreeElement</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLeafTreeElements()" class="member-name-link">getLeafTreeElements</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTreeElement(edu.rpi.legup.model.tree.TreeElement)" class="member-name-link">addTreeElement</a><wbr>(<a href="TreeElement.html" title="class in edu.rpi.legup.model.tree">TreeElement</a>&nbsp;element)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets a Set of TreeNodes that are leaf nodes</div>
+<div class="block">Adds a tree element (node or transition) to the tree.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TreeElement.html" title="class in edu.rpi.legup.model.tree">TreeElement</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTreeElement(edu.rpi.legup.model.tree.TreeNode,edu.rpi.legup.model.tree.TreeTransition)" class="member-name-link">addTreeElement</a><wbr>(<a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a>&nbsp;treeNode,
+ <a href="TreeTransition.html" title="class in edu.rpi.legup.model.tree">TreeTransition</a>&nbsp;transition)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds a tree node and its associated transition to the tree.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TreeElement.html" title="class in edu.rpi.legup.model.tree">TreeElement</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTreeElement(edu.rpi.legup.model.tree.TreeTransition,edu.rpi.legup.model.tree.TreeNode)" class="member-name-link">addTreeElement</a><wbr>(<a href="TreeTransition.html" title="class in edu.rpi.legup.model.tree">TreeTransition</a>&nbsp;transition,
+ <a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a>&nbsp;treeNode)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds a transition and its associated tree node to the tree.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="TreeElement.html" title="class in edu.rpi.legup.model.tree">TreeElement</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLeafTreeElements(edu.rpi.legup.model.tree.TreeNode)" class="member-name-link">getLeafTreeElements</a><wbr>(<a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a>&nbsp;node)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLeafTreeElements()" class="member-name-link">getLeafTreeElements</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets a Set of TreeNodes that are leaf nodes from the sub tree rooted at the specified node</div>
+<div class="block">Gets a Set of TreeNodes that are leaf nodes</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getLowestCommonAncestor(java.util.List)" class="member-name-link">getLowestCommonAncestor</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a>&gt;&nbsp;nodes)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="TreeElement.html" title="class in edu.rpi.legup.model.tree">TreeElement</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLeafTreeElements(edu.rpi.legup.model.tree.TreeNode)" class="member-name-link">getLeafTreeElements</a><wbr>(<a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a>&nbsp;node)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Gets a Set of TreeNodes that are leaf nodes from the subtree rooted at the specified node</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getLowestCommonAncestor(java.util.List)" class="member-name-link">getLowestCommonAncestor</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a>&gt;&nbsp;nodes)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Gets the lowest common ancestor (LCA) among the list of <a href="TreeNode.html" title="class in edu.rpi.legup.model.tree"><code>TreeNode</code></a> passed into the
  function.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRootNode()" class="member-name-link">getRootNode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRootNode()" class="member-name-link">getRootNode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Gets the root node of this tree</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isValid()" class="member-name-link">isValid</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isValid()" class="member-name-link">isValid</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Determines if the tree is valid by checking whether this tree puzzleElement and all
  descendants of this tree puzzleElement is justified and justified correctly</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeTreeElement(edu.rpi.legup.model.tree.TreeElement)" class="member-name-link">removeTreeElement</a><wbr>(<a href="TreeElement.html" title="class in edu.rpi.legup.model.tree">TreeElement</a>&nbsp;element)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRootNode(edu.rpi.legup.model.tree.TreeNode)" class="member-name-link">setRootNode</a><wbr>(<a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a>&nbsp;rootNode)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeTreeElement(edu.rpi.legup.model.tree.TreeElement)" class="member-name-link">removeTreeElement</a><wbr>(<a href="TreeElement.html" title="class in edu.rpi.legup.model.tree">TreeElement</a>&nbsp;element)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Removes a tree element (node or transition) from the tree.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRootNode(edu.rpi.legup.model.tree.TreeNode)" class="member-name-link">setRootNode</a><wbr>(<a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a>&nbsp;rootNode)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets the root node of this tree</div>
 </div>
 </div>
@@ -223,18 +233,26 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="addNewTransition(edu.rpi.legup.model.tree.TreeNode)">
 <h3>addNewTransition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TreeTransition.html" title="class in edu.rpi.legup.model.tree">TreeTransition</a></span>&nbsp;<span class="element-name">addNewTransition</span><wbr><span class="parameters">(<a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a>&nbsp;treeNode)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="addNode(edu.rpi.legup.model.tree.TreeTransition)">
-<h3>addNode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a></span>&nbsp;<span class="element-name">addNode</span><wbr><span class="parameters">(<a href="TreeTransition.html" title="class in edu.rpi.legup.model.tree">TreeTransition</a>&nbsp;transition)</span></div>
+<div class="block">Adds a new transition to the specified node.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>treeNode</code> - the node to add a transition to</dd>
+<dt>Returns:</dt>
+<dd>the created transition</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="addTreeElement(edu.rpi.legup.model.tree.TreeElement)">
 <h3>addTreeElement</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TreeElement.html" title="class in edu.rpi.legup.model.tree">TreeElement</a></span>&nbsp;<span class="element-name">addTreeElement</span><wbr><span class="parameters">(<a href="TreeElement.html" title="class in edu.rpi.legup.model.tree">TreeElement</a>&nbsp;element)</span></div>
+<div class="block">Adds a tree element (node or transition) to the tree.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>element</code> - the tree element to add</dd>
+<dt>Returns:</dt>
+<dd>the added tree element</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -242,6 +260,14 @@ loadScripts(document, 'script');</script>
 <h3>addTreeElement</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TreeElement.html" title="class in edu.rpi.legup.model.tree">TreeElement</a></span>&nbsp;<span class="element-name">addTreeElement</span><wbr><span class="parameters">(<a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a>&nbsp;treeNode,
  <a href="TreeTransition.html" title="class in edu.rpi.legup.model.tree">TreeTransition</a>&nbsp;transition)</span></div>
+<div class="block">Adds a tree node and its associated transition to the tree.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>treeNode</code> - the tree node to add</dd>
+<dd><code>transition</code> - the transition to associate with the node</dd>
+<dt>Returns:</dt>
+<dd>the added transition</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -249,12 +275,25 @@ loadScripts(document, 'script');</script>
 <h3>addTreeElement</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TreeElement.html" title="class in edu.rpi.legup.model.tree">TreeElement</a></span>&nbsp;<span class="element-name">addTreeElement</span><wbr><span class="parameters">(<a href="TreeTransition.html" title="class in edu.rpi.legup.model.tree">TreeTransition</a>&nbsp;transition,
  <a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a>&nbsp;treeNode)</span></div>
+<div class="block">Adds a transition and its associated tree node to the tree.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>transition</code> - the transition to add</dd>
+<dd><code>treeNode</code> - the tree node to associate with the transition</dd>
+<dt>Returns:</dt>
+<dd>the added tree node</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="removeTreeElement(edu.rpi.legup.model.tree.TreeElement)">
 <h3>removeTreeElement</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removeTreeElement</span><wbr><span class="parameters">(<a href="TreeElement.html" title="class in edu.rpi.legup.model.tree">TreeElement</a>&nbsp;element)</span></div>
+<div class="block">Removes a tree element (node or transition) from the tree.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>element</code> - the tree element to remove</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -284,12 +323,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getLeafTreeElements(edu.rpi.legup.model.tree.TreeNode)">
 <h3>getLeafTreeElements</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="TreeElement.html" title="class in edu.rpi.legup.model.tree">TreeElement</a>&gt;</span>&nbsp;<span class="element-name">getLeafTreeElements</span><wbr><span class="parameters">(<a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a>&nbsp;node)</span></div>
-<div class="block">Gets a Set of TreeNodes that are leaf nodes from the sub tree rooted at the specified node</div>
+<div class="block">Gets a Set of TreeNodes that are leaf nodes from the subtree rooted at the specified node</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>node</code> - node that is input</dd>
 <dt>Returns:</dt>
-<dd>Set of TreeNodes that are leaf nodes from the sub tree</dd>
+<dd>Set of TreeNodes that are leaf nodes from the subtree</dd>
 </dl>
 </section>
 </li>

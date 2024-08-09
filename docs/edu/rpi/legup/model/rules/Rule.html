@@ -95,6 +95,10 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">Rule</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Abstract base class for defining rules.
+ This class encapsulates the common functionality and attributes of all rules,
+ including rule identification, description, image handling, and validation logic.
+ Subclasses must provide implementations for specific rule checking logic.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -194,7 +198,9 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getInvalidUseOfRuleMessage()" class="member-name-link">getInvalidUseOfRuleMessage</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Gets the message indicating an invalid use of the rule.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRuleID()" class="member-name-link">getRuleID</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -445,6 +451,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getInvalidUseOfRuleMessage()">
 <h3>getInvalidUseOfRuleMessage</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getInvalidUseOfRuleMessage</span>()</div>
+<div class="block">Gets the message indicating an invalid use of the rule.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the invalid use message</dd>
+</dl>
 </section>
 </li>
 </ul>

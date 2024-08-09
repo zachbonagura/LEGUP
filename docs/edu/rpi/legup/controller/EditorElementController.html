@@ -96,6 +96,8 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">EditorElementController</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/event/ActionListener.html" title="class or interface in java.awt.event" class="external-link">ActionListener</a></span></div>
+<div class="block"><code>EditorElementController</code> manages actions related to UI elements within the puzzle editor environment.
+ It handles button presses, updates element selection, and manages visual states of buttons</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -146,13 +148,19 @@ implements <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.desk
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#actionPerformed(java.awt.event.ActionEvent)" class="member-name-link">actionPerformed</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/event/ActionEvent.html" title="class or interface in java.awt.event" class="external-link">ActionEvent</a>&nbsp;e)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Handles action events triggered by buttons</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buttonPressed(edu.rpi.legup.model.elements.Element)" class="member-name-link">buttonPressed</a><wbr>(<a href="../model/elements/Element.html" title="class in edu.rpi.legup.model.elements">Element</a>&nbsp;element)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Handles the event when a button associated with an Element is pressed</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setElementController(edu.rpi.legup.controller.ElementController)" class="member-name-link">setElementController</a><wbr>(<a href="ElementController.html" title="class in edu.rpi.legup.controller">ElementController</a>&nbsp;elementController)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets the ElementController instance for this controller</div>
+</div>
 </div>
 </div>
 </div>
@@ -214,21 +222,34 @@ implements <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.desk
 <section class="detail" id="setElementController(edu.rpi.legup.controller.ElementController)">
 <h3>setElementController</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setElementController</span><wbr><span class="parameters">(<a href="ElementController.html" title="class in edu.rpi.legup.controller">ElementController</a>&nbsp;elementController)</span></div>
+<div class="block">Sets the ElementController instance for this controller</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>elementController</code> - the ElementController instance to be set</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="buttonPressed(edu.rpi.legup.model.elements.Element)">
 <h3>buttonPressed</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">buttonPressed</span><wbr><span class="parameters">(<a href="../model/elements/Element.html" title="class in edu.rpi.legup.model.elements">Element</a>&nbsp;element)</span></div>
+<div class="block">Handles the event when a button associated with an Element is pressed</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>element</code> - the Element associated with the button that was pressed</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="actionPerformed(java.awt.event.ActionEvent)">
 <h3>actionPerformed</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">actionPerformed</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/event/ActionEvent.html" title="class or interface in java.awt.event" class="external-link">ActionEvent</a>&nbsp;e)</span></div>
+<div class="block">Handles action events triggered by buttons</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/event/ActionListener.html#actionPerformed(java.awt.event.ActionEvent)" title="class or interface in java.awt.event" class="external-link">actionPerformed</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/event/ActionListener.html" title="class or interface in java.awt.event" class="external-link">ActionListener</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>e</code> - the event to be processed</dd>
 </dl>
 </section>
 </li>

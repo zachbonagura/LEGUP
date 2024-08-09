@@ -91,6 +91,8 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">IBoardSubject</span></div>
+<div class="block">IBoardSubject defines methods for managing and notifying board listeners.
+ It allows for adding and removing listeners, and for notifying them using a specified algorithm.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -113,7 +115,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#notifyBoardListeners(java.util.function.Consumer)" class="member-name-link">notifyBoardListeners</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;? super <a href="IBoardListener.html" title="interface in edu.rpi.legup.model.observer">IBoardListener</a>&gt;&nbsp;algorithm)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Notifies all of the listeners using the specified algorithm.</div>
+<div class="block">Notifies all the listeners using the specified algorithm.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#removeBoardListener(edu.rpi.legup.model.observer.IBoardListener)" class="member-name-link">removeBoardListener</a><wbr>(<a href="IBoardListener.html" title="interface in edu.rpi.legup.model.observer">IBoardListener</a>&nbsp;listener)</code></div>
@@ -160,7 +162,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="notifyBoardListeners(java.util.function.Consumer)">
 <h3>notifyBoardListeners</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">notifyBoardListeners</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;? super <a href="IBoardListener.html" title="interface in edu.rpi.legup.model.observer">IBoardListener</a>&gt;&nbsp;algorithm)</span></div>
-<div class="block">Notifies all of the listeners using the specified algorithm.</div>
+<div class="block">Notifies all the listeners using the specified algorithm.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>algorithm</code> - algorithm used to notify the listeners</dd>

@@ -100,6 +100,9 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">Puzzle</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="observer/IBoardSubject.html" title="interface in edu.rpi.legup.model.observer">IBoardSubject</a>, <a href="observer/ITreeSubject.html" title="interface in edu.rpi.legup.model.observer">ITreeSubject</a></span></div>
+<div class="block">Abstract class representing a puzzle.
+ The Puzzle class manages the core components of a puzzle game, including the board, rules, and elements.
+ It also handles importing and exporting puzzle configurations and notifies listeners about changes.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -177,7 +180,7 @@ implements <a href="observer/IBoardSubject.html" title="interface in edu.rpi.leg
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addBoardListener(edu.rpi.legup.model.observer.IBoardListener)" class="member-name-link">addBoardListener</a><wbr>(<a href="observer/IBoardListener.html" title="interface in edu.rpi.legup.model.observer">IBoardListener</a>&nbsp;listener)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Adds a board listener</div>
+<div class="block">Adds a board listener to the list of listeners.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addCaseRule(edu.rpi.legup.model.rules.CaseRule)" class="member-name-link">addCaseRule</a><wbr>(<a href="rules/CaseRule.html" title="class in edu.rpi.legup.model.rules">CaseRule</a>&nbsp;rule)</code></div>
@@ -196,16 +199,18 @@ implements <a href="observer/IBoardSubject.html" title="interface in edu.rpi.leg
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addPlaceableElement(edu.rpi.legup.model.elements.PlaceableElement)" class="member-name-link">addPlaceableElement</a><wbr>(<a href="elements/PlaceableElement.html" title="class in edu.rpi.legup.model.elements">PlaceableElement</a>&nbsp;element)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds a placeable element to this puzzle.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTreeListener(edu.rpi.legup.model.observer.ITreeListener)" class="member-name-link">addTreeListener</a><wbr>(<a href="observer/ITreeListener.html" title="interface in edu.rpi.legup.model.observer">ITreeListener</a>&nbsp;listener)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Adds a board listener</div>
+<div class="block">Adds a tree listener to the list of listeners.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#checkValidity()" class="member-name-link">checkValidity</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Check if the puzzle is valid</div>
+<div class="block">Checks if the puzzle is valid.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract <a href="gameboard/Board.html" title="class in edu.rpi.legup.model.gameboard">Board</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#generatePuzzle(int)" class="member-name-link">generatePuzzle</a><wbr>(int&nbsp;difficulty)</code></div>
@@ -259,7 +264,9 @@ implements <a href="observer/IBoardSubject.html" title="interface in edu.rpi.leg
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="elements/PlaceableElement.html" title="class in edu.rpi.legup.model.elements">PlaceableElement</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPlaceableElements()" class="member-name-link">getPlaceableElements</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Gets the list of placeable elements.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="rules/Rule.html" title="class in edu.rpi.legup.model.rules">Rule</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRuleByID(java.lang.String)" class="member-name-link">getRuleByID</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -309,17 +316,17 @@ implements <a href="observer/IBoardSubject.html" title="interface in edu.rpi.leg
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isValidTextInput(java.lang.String%5B%5D)" class="member-name-link">isValidTextInput</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;statements)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Checks if the given array of statements is valid text input for the given puzzle</div>
+<div class="block">Checks if the provided text input is valid for the puzzle.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#notifyBoardListeners(java.util.function.Consumer)" class="member-name-link">notifyBoardListeners</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;? super <a href="observer/IBoardListener.html" title="interface in edu.rpi.legup.model.observer">IBoardListener</a>&gt;&nbsp;algorithm)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Notifies listeners</div>
+<div class="block">Notifies all registered board listeners about changes.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#notifyTreeListeners(java.util.function.Consumer)" class="member-name-link">notifyTreeListeners</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;? super <a href="observer/ITreeListener.html" title="interface in edu.rpi.legup.model.observer">ITreeListener</a>&gt;&nbsp;algorithm)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Notifies listeners</div>
+<div class="block">Notifies all registered tree listeners about changes.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#onBoardChange(edu.rpi.legup.model.gameboard.Board)" class="member-name-link">onBoardChange</a><wbr>(<a href="gameboard/Board.html" title="class in edu.rpi.legup.model.gameboard">Board</a>&nbsp;board)</code></div>
@@ -329,7 +336,7 @@ implements <a href="observer/IBoardSubject.html" title="interface in edu.rpi.leg
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeBoardListener(edu.rpi.legup.model.observer.IBoardListener)" class="member-name-link">removeBoardListener</a><wbr>(<a href="observer/IBoardListener.html" title="interface in edu.rpi.legup.model.observer">IBoardListener</a>&nbsp;listener)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Removes a board listener</div>
+<div class="block">Removes a board listener from the list of listeners.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeCaseRule(edu.rpi.legup.model.rules.CaseRule)" class="member-name-link">removeCaseRule</a><wbr>(<a href="rules/CaseRule.html" title="class in edu.rpi.legup.model.rules">CaseRule</a>&nbsp;rule)</code></div>
@@ -349,7 +356,7 @@ implements <a href="observer/IBoardSubject.html" title="interface in edu.rpi.leg
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeTreeListener(edu.rpi.legup.model.observer.ITreeListener)" class="member-name-link">removeTreeListener</a><wbr>(<a href="observer/ITreeListener.html" title="interface in edu.rpi.legup.model.observer">ITreeListener</a>&nbsp;listener)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Removes a tree listener</div>
+<div class="block">Removes a tree listener from the list of listeners.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBoardView(edu.rpi.legup.ui.boardview.BoardView)" class="member-name-link">setBoardView</a><wbr>(<a href="../ui/boardview/BoardView.html" title="class in edu.rpi.legup.ui.boardview">BoardView</a>&nbsp;boardView)</code></div>
@@ -531,11 +538,12 @@ implements <a href="observer/IBoardSubject.html" title="interface in edu.rpi.leg
 <section class="detail" id="isValidTextInput(java.lang.String[])">
 <h3>isValidTextInput</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isValidTextInput</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;statements)</span></div>
-<div class="block">Checks if the given array of statements is valid text input for the given puzzle</div>
+<div class="block">Checks if the provided text input is valid for the puzzle.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>statements</code> - </dd>
+<dd><code>statements</code> - array of statements to check</dd>
 <dt>Returns:</dt>
+<dd>true if input is valid, false otherwise</dd>
 </dl>
 </section>
 </li>
@@ -650,6 +658,11 @@ implements <a href="observer/IBoardSubject.html" title="interface in edu.rpi.leg
 <section class="detail" id="getPlaceableElements()">
 <h3>getPlaceableElements</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="elements/PlaceableElement.html" title="class in edu.rpi.legup.model.elements">PlaceableElement</a>&gt;</span>&nbsp;<span class="element-name">getPlaceableElements</span>()</div>
+<div class="block">Gets the list of placeable elements.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>list of PlaceableElement instances</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -678,6 +691,11 @@ implements <a href="observer/IBoardSubject.html" title="interface in edu.rpi.leg
 <section class="detail" id="addPlaceableElement(edu.rpi.legup.model.elements.PlaceableElement)">
 <h3>addPlaceableElement</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addPlaceableElement</span><wbr><span class="parameters">(<a href="elements/PlaceableElement.html" title="class in edu.rpi.legup.model.elements">PlaceableElement</a>&nbsp;element)</span></div>
+<div class="block">Adds a placeable element to this puzzle.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>element</code> - PlaceableElement to add</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -897,12 +915,13 @@ implements <a href="observer/IBoardSubject.html" title="interface in edu.rpi.leg
 <section class="detail" id="addBoardListener(edu.rpi.legup.model.observer.IBoardListener)">
 <h3>addBoardListener</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addBoardListener</span><wbr><span class="parameters">(<a href="observer/IBoardListener.html" title="interface in edu.rpi.legup.model.observer">IBoardListener</a>&nbsp;listener)</span></div>
-<div class="block">Adds a board listener</div>
+<div class="block">Adds a board listener to the list of listeners.
+ This allows the puzzle to notify the listener about changes to the board.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="observer/IBoardSubject.html#addBoardListener(edu.rpi.legup.model.observer.IBoardListener)">addBoardListener</a></code>&nbsp;in interface&nbsp;<code><a href="observer/IBoardSubject.html" title="interface in edu.rpi.legup.model.observer">IBoardSubject</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>listener</code> - listener to add</dd>
+<dd><code>listener</code> - The IBoardListener to be added to the list of listeners.</dd>
 </dl>
 </section>
 </li>
@@ -910,12 +929,13 @@ implements <a href="observer/IBoardSubject.html" title="interface in edu.rpi.leg
 <section class="detail" id="removeBoardListener(edu.rpi.legup.model.observer.IBoardListener)">
 <h3>removeBoardListener</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removeBoardListener</span><wbr><span class="parameters">(<a href="observer/IBoardListener.html" title="interface in edu.rpi.legup.model.observer">IBoardListener</a>&nbsp;listener)</span></div>
-<div class="block">Removes a board listener</div>
+<div class="block">Removes a board listener from the list of listeners.
+ This prevents the puzzle from notifying the listener about future changes to the board.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="observer/IBoardSubject.html#removeBoardListener(edu.rpi.legup.model.observer.IBoardListener)">removeBoardListener</a></code>&nbsp;in interface&nbsp;<code><a href="observer/IBoardSubject.html" title="interface in edu.rpi.legup.model.observer">IBoardSubject</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>listener</code> - listener to remove</dd>
+<dd><code>listener</code> - The IBoardListener to be removed from the list of listeners.</dd>
 </dl>
 </section>
 </li>
@@ -923,12 +943,13 @@ implements <a href="observer/IBoardSubject.html" title="interface in edu.rpi.leg
 <section class="detail" id="notifyBoardListeners(java.util.function.Consumer)">
 <h3>notifyBoardListeners</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">notifyBoardListeners</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;? super <a href="observer/IBoardListener.html" title="interface in edu.rpi.legup.model.observer">IBoardListener</a>&gt;&nbsp;algorithm)</span></div>
-<div class="block">Notifies listeners</div>
+<div class="block">Notifies all registered board listeners about changes.
+ The provided algorithm is applied to each listener to process the notification.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="observer/IBoardSubject.html#notifyBoardListeners(java.util.function.Consumer)">notifyBoardListeners</a></code>&nbsp;in interface&nbsp;<code><a href="observer/IBoardSubject.html" title="interface in edu.rpi.legup.model.observer">IBoardSubject</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>algorithm</code> - algorithm to notify the listeners with</dd>
+<dd><code>algorithm</code> - A Consumer function that takes an IBoardListener and performs operations to notify the listener.</dd>
 </dl>
 </section>
 </li>
@@ -936,12 +957,13 @@ implements <a href="observer/IBoardSubject.html" title="interface in edu.rpi.leg
 <section class="detail" id="addTreeListener(edu.rpi.legup.model.observer.ITreeListener)">
 <h3>addTreeListener</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addTreeListener</span><wbr><span class="parameters">(<a href="observer/ITreeListener.html" title="interface in edu.rpi.legup.model.observer">ITreeListener</a>&nbsp;listener)</span></div>
-<div class="block">Adds a board listener</div>
+<div class="block">Adds a tree listener to the list of listeners.
+ This allows the puzzle to notify the listener about changes to the tree.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="observer/ITreeSubject.html#addTreeListener(edu.rpi.legup.model.observer.ITreeListener)">addTreeListener</a></code>&nbsp;in interface&nbsp;<code><a href="observer/ITreeSubject.html" title="interface in edu.rpi.legup.model.observer">ITreeSubject</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>listener</code> - listener to add</dd>
+<dd><code>listener</code> - The ITreeListener to be added to the list of listeners.</dd>
 </dl>
 </section>
 </li>
@@ -949,12 +971,13 @@ implements <a href="observer/IBoardSubject.html" title="interface in edu.rpi.leg
 <section class="detail" id="removeTreeListener(edu.rpi.legup.model.observer.ITreeListener)">
 <h3>removeTreeListener</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removeTreeListener</span><wbr><span class="parameters">(<a href="observer/ITreeListener.html" title="interface in edu.rpi.legup.model.observer">ITreeListener</a>&nbsp;listener)</span></div>
-<div class="block">Removes a tree listener</div>
+<div class="block">Removes a tree listener from the list of listeners.
+ This prevents the puzzle from notifying the listener about future changes to the tree.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="observer/ITreeSubject.html#removeTreeListener(edu.rpi.legup.model.observer.ITreeListener)">removeTreeListener</a></code>&nbsp;in interface&nbsp;<code><a href="observer/ITreeSubject.html" title="interface in edu.rpi.legup.model.observer">ITreeSubject</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>listener</code> - listener to remove</dd>
+<dd><code>listener</code> - The ITreeListener to be removed from the list of listeners.</dd>
 </dl>
 </section>
 </li>
@@ -962,12 +985,13 @@ implements <a href="observer/IBoardSubject.html" title="interface in edu.rpi.leg
 <section class="detail" id="notifyTreeListeners(java.util.function.Consumer)">
 <h3>notifyTreeListeners</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">notifyTreeListeners</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;? super <a href="observer/ITreeListener.html" title="interface in edu.rpi.legup.model.observer">ITreeListener</a>&gt;&nbsp;algorithm)</span></div>
-<div class="block">Notifies listeners</div>
+<div class="block">Notifies all registered tree listeners about changes.
+ The provided algorithm is applied to each listener to process the notification.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="observer/ITreeSubject.html#notifyTreeListeners(java.util.function.Consumer)">notifyTreeListeners</a></code>&nbsp;in interface&nbsp;<code><a href="observer/ITreeSubject.html" title="interface in edu.rpi.legup.model.observer">ITreeSubject</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>algorithm</code> - algorithm to notify the listeners with</dd>
+<dd><code>algorithm</code> - A Consumer function that takes an ITreeListener and performs operations to notify the listener.</dd>
 </dl>
 </section>
 </li>
@@ -975,10 +999,11 @@ implements <a href="observer/IBoardSubject.html" title="interface in edu.rpi.leg
 <section class="detail" id="checkValidity()">
 <h3>checkValidity</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">checkValidity</span>()</div>
-<div class="block">Check if the puzzle is valid</div>
+<div class="block">Checks if the puzzle is valid.
+ The implementation of this method can vary based on the specific criteria for puzzle validity.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>if the puzzle is valid</dd>
+<dd>true if the puzzle is valid, false otherwise.</dd>
 </dl>
 </section>
 </li>

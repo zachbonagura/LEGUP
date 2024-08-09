@@ -95,6 +95,10 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">PuzzleImporter</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Abstract class for importing puzzle data from various sources into a puzzle object.
+ This class provides methods to initialize and set up a puzzle, including its board and proof structure,
+ from different input formats such as dimensions, statements, or XML files.
+ Subclasses must implement methods to handle specific formats for board initialization and proof creation.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -147,7 +151,9 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createDefaultTree()" class="member-name-link">createDefaultTree</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Creates a default proof tree with a single root node.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createTree(org.w3c.dom.Node)" class="member-name-link">createTree</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;node)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -161,21 +167,23 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Puzzle.html" title="class in edu.rpi.legup.model">Puzzle</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPuzzle()" class="member-name-link">getPuzzle</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets the result of building the Puzzle</div>
+<div class="block">Gets the result of building the Puzzle object.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#initializeBoard(int,int)" class="member-name-link">initializeBoard</a><wbr>(int&nbsp;rows,
  int&nbsp;columns)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Creates the board for building</div>
+<div class="block">Initializes the board with the specified number of rows and columns.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#initializeBoard(java.lang.String%5B%5D)" class="member-name-link">initializeBoard</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;statements)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Initializes the board using an array of statements.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#initializeBoard(org.w3c.dom.Node)" class="member-name-link">initializeBoard</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;node)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Creates an empty board for building</div>
+<div class="block">Initializes the board from the XML document node.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initializeProof(org.w3c.dom.Node)" class="member-name-link">initializeProof</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;node)</code></div>
@@ -190,16 +198,20 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initializePuzzle(java.lang.String%5B%5D)" class="member-name-link">initializePuzzle</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;statements)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Initializes the puzzle with the given array of statements</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initializePuzzle(org.w3c.dom.Node)" class="member-name-link">initializePuzzle</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;node)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Initializes the puzzle attributes</div>
+<div class="block">Initializes the puzzle attributes from the XML document node</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#makeTransitionChanges(edu.rpi.legup.model.tree.TreeTransition,org.w3c.dom.Node)" class="member-name-link">makeTransitionChanges</a><wbr>(<a href="tree/TreeTransition.html" title="class in edu.rpi.legup.model.tree">TreeTransition</a>&nbsp;transition,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;transElement)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Updates the board state based on the changes specified in the TreeTransition.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCells(org.w3c.dom.Node)" class="member-name-link">setCells</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;node)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -293,10 +305,13 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">initializePuzzle</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;statements)</span>
                       throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/InputMismatchException.html" title="class or interface in java.util" class="external-link">InputMismatchException</a>,
 <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></span></div>
+<div class="block">Initializes the puzzle with the given array of statements</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>statements</code> - the statements used to initialize the puzzle</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/InputMismatchException.html" title="class or interface in java.util" class="external-link">InputMismatchException</a></code></dd>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/InputMismatchException.html" title="class or interface in java.util" class="external-link">InputMismatchException</a></code> - if the input statements are invalid</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the statements are not suitable for initializing the puzzle</dd>
 </dl>
 </section>
 </li>
@@ -305,12 +320,12 @@ loadScripts(document, 'script');</script>
 <h3>initializePuzzle</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">initializePuzzle</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;node)</span>
                       throws <span class="exceptions"><a href="../save/InvalidFileFormatException.html" title="class in edu.rpi.legup.save">InvalidFileFormatException</a></span></div>
-<div class="block">Initializes the puzzle attributes</div>
+<div class="block">Initializes the puzzle attributes from the XML document node</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>node</code> - xml document node</dd>
+<dd><code>node</code> - the XML document node representing the puzzle</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../save/InvalidFileFormatException.html" title="class in edu.rpi.legup.save">InvalidFileFormatException</a></code> - if file is invalid</dd>
+<dd><code><a href="../save/InvalidFileFormatException.html" title="class in edu.rpi.legup.save">InvalidFileFormatException</a></code> - if the file format is invalid</dd>
 </dl>
 </section>
 </li>
@@ -319,13 +334,13 @@ loadScripts(document, 'script');</script>
 <h3>initializeBoard</h3>
 <div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">initializeBoard</span><wbr><span class="parameters">(int&nbsp;rows,
  int&nbsp;columns)</span></div>
-<div class="block">Creates the board for building</div>
+<div class="block">Initializes the board with the specified number of rows and columns.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>rows</code> - number of rows on the puzzle</dd>
-<dd><code>columns</code> - number of columns on the puzzle</dd>
+<dd><code>rows</code> - the number of rows on the puzzle</dd>
+<dd><code>columns</code> - the number of columns on the puzzle</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a></code> - if board can not be created</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a></code> - if the board cannot be created with the provided dimensions</dd>
 </dl>
 </section>
 </li>
@@ -334,12 +349,12 @@ loadScripts(document, 'script');</script>
 <h3>initializeBoard</h3>
 <div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">initializeBoard</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;node)</span>
                               throws <span class="exceptions"><a href="../save/InvalidFileFormatException.html" title="class in edu.rpi.legup.save">InvalidFileFormatException</a></span></div>
-<div class="block">Creates an empty board for building</div>
+<div class="block">Initializes the board from the XML document node.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>node</code> - xml document node</dd>
+<dd><code>node</code> - the XML document node representing the board</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../save/InvalidFileFormatException.html" title="class in edu.rpi.legup.save">InvalidFileFormatException</a></code> - if file is invalid</dd>
+<dd><code><a href="../save/InvalidFileFormatException.html" title="class in edu.rpi.legup.save">InvalidFileFormatException</a></code> - if the file format is invalid</dd>
 </dl>
 </section>
 </li>
@@ -349,10 +364,13 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">initializeBoard</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;statements)</span>
                               throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link">UnsupportedOperationException</a>,
 <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></span></div>
+<div class="block">Initializes the board using an array of statements.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>statements</code> - the statements used to initialize the board</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link">UnsupportedOperationException</a></code></dd>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link">UnsupportedOperationException</a></code> - if the operation is not supported</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the statements are not suitable for initializing the board</dd>
 </dl>
 </section>
 </li>
@@ -430,9 +448,13 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">makeTransitionChanges</span><wbr><span class="parameters">(<a href="tree/TreeTransition.html" title="class in edu.rpi.legup.model.tree">TreeTransition</a>&nbsp;transition,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;transElement)</span>
                               throws <span class="exceptions"><a href="../save/InvalidFileFormatException.html" title="class in edu.rpi.legup.save">InvalidFileFormatException</a></span></div>
+<div class="block">Updates the board state based on the changes specified in the TreeTransition.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>transition</code> - the TreeTransition object representing the transition to be updated</dd>
+<dd><code>transElement</code> - the XML node containing the transition data</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../save/InvalidFileFormatException.html" title="class in edu.rpi.legup.save">InvalidFileFormatException</a></code></dd>
+<dd><code><a href="../save/InvalidFileFormatException.html" title="class in edu.rpi.legup.save">InvalidFileFormatException</a></code> - if the XML node format is incorrect or unknown nodes are encountered</dd>
 </dl>
 </section>
 </li>
@@ -440,13 +462,15 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="createDefaultTree()">
 <h3>createDefaultTree</h3>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">createDefaultTree</span>()</div>
+<div class="block">Creates a default proof tree with a single root node. The root node is initialized with the current board state.
+ The created tree is then set as the proof tree for the puzzle.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPuzzle()">
 <h3>getPuzzle</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Puzzle.html" title="class in edu.rpi.legup.model">Puzzle</a></span>&nbsp;<span class="element-name">getPuzzle</span>()</div>
-<div class="block">Gets the result of building the Puzzle</div>
+<div class="block">Gets the result of building the Puzzle object.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>puzzle</dd>

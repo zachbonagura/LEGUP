@@ -97,6 +97,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">CaseBoard</span>
 <span class="extends-implements">extends <a href="Board.html" title="class in edu.rpi.legup.model.gameboard">Board</a></span></div>
+<div class="block">Represents a game board with specific rules for selecting puzzle elements.
+ Extends the abstract `Board` class and adds functionality for handling pickable elements and case rules.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -134,7 +136,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(edu.rpi.legup.model.gameboard.Board,edu.rpi.legup.model.rules.CaseRule)" class="member-name-link">CaseBoard</a><wbr>(<a href="Board.html" title="class in edu.rpi.legup.model.gameboard">Board</a>&nbsp;baseBoard,
  <a href="../rules/CaseRule.html" title="class in edu.rpi.legup.model.rules">CaseRule</a>&nbsp;caseRule)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Constructs a CaseBoard with a base board and a case rule.</div>
+</div>
 </div>
 </section>
 </li>
@@ -151,34 +155,50 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addPickableElement(edu.rpi.legup.model.gameboard.PuzzleElement)" class="member-name-link">addPickableElement</a><wbr>(<a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&nbsp;puzzleElement)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds a puzzle element to the set of pickable elements.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CaseBoard.html" title="class in edu.rpi.legup.model.gameboard">CaseBoard</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copy()" class="member-name-link">copy</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Performs a deep copy of this board.</div>
+<div class="block">Performs a deep copy of this CaseBoard.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Board.html" title="class in edu.rpi.legup.model.gameboard">Board</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBaseBoard()" class="member-name-link">getBaseBoard</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves the base board for this CaseBoard.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../rules/CaseRule.html" title="class in edu.rpi.legup.model.rules">CaseRule</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCaseRule()" class="member-name-link">getCaseRule</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves the case rule for this CaseBoard.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCount()" class="member-name-link">getCount</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Gets the count of pickable puzzle elements.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isPickable(edu.rpi.legup.model.gameboard.PuzzleElement,java.awt.event.MouseEvent)" class="member-name-link">isPickable</a><wbr>(<a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&nbsp;puzzleElement,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/event/MouseEvent.html" title="class or interface in java.awt.event" class="external-link">MouseEvent</a>&nbsp;e)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Checks if a puzzle element is pickable based on the mouse event.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removePickableElement(edu.rpi.legup.model.gameboard.PuzzleElement)" class="member-name-link">removePickableElement</a><wbr>(<a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&nbsp;puzzleElement)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Removes a puzzle element from the set of pickable elements.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBaseBoard(edu.rpi.legup.model.gameboard.Board)" class="member-name-link">setBaseBoard</a><wbr>(<a href="Board.html" title="class in edu.rpi.legup.model.gameboard">Board</a>&nbsp;baseBoard)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets the base board for this CaseBoard.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCaseRule(edu.rpi.legup.model.rules.CaseRule)" class="member-name-link">setCaseRule</a><wbr>(<a href="../rules/CaseRule.html" title="class in edu.rpi.legup.model.rules">CaseRule</a>&nbsp;caseRule)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets the case rule for this CaseBoard.</div>
+</div>
 </div>
 </div>
 </div>
@@ -230,6 +250,12 @@ loadScripts(document, 'script');</script>
 <h3>CaseBoard</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CaseBoard</span><wbr><span class="parameters">(<a href="Board.html" title="class in edu.rpi.legup.model.gameboard">Board</a>&nbsp;baseBoard,
  <a href="../rules/CaseRule.html" title="class in edu.rpi.legup.model.rules">CaseRule</a>&nbsp;caseRule)</span></div>
+<div class="block">Constructs a CaseBoard with a base board and a case rule.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>baseBoard</code> - the base board to use for this CaseBoard</dd>
+<dd><code>caseRule</code> - the case rule applied to this CaseBoard</dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -244,12 +270,22 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="addPickableElement(edu.rpi.legup.model.gameboard.PuzzleElement)">
 <h3>addPickableElement</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addPickableElement</span><wbr><span class="parameters">(<a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&nbsp;puzzleElement)</span></div>
+<div class="block">Adds a puzzle element to the set of pickable elements.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>puzzleElement</code> - the puzzle element to add</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="removePickableElement(edu.rpi.legup.model.gameboard.PuzzleElement)">
 <h3>removePickableElement</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removePickableElement</span><wbr><span class="parameters">(<a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&nbsp;puzzleElement)</span></div>
+<div class="block">Removes a puzzle element from the set of pickable elements.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>puzzleElement</code> - the puzzle element to remove</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -257,49 +293,82 @@ loadScripts(document, 'script');</script>
 <h3>isPickable</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isPickable</span><wbr><span class="parameters">(<a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&nbsp;puzzleElement,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/event/MouseEvent.html" title="class or interface in java.awt.event" class="external-link">MouseEvent</a>&nbsp;e)</span></div>
+<div class="block">Checks if a puzzle element is pickable based on the mouse event.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>puzzleElement</code> - the puzzle element to check</dd>
+<dd><code>e</code> - the mouse event</dd>
+<dt>Returns:</dt>
+<dd>true if the puzzle element is pickable, false otherwise</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getBaseBoard()">
 <h3>getBaseBoard</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Board.html" title="class in edu.rpi.legup.model.gameboard">Board</a></span>&nbsp;<span class="element-name">getBaseBoard</span>()</div>
+<div class="block">Retrieves the base board for this CaseBoard.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the base board</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="setBaseBoard(edu.rpi.legup.model.gameboard.Board)">
 <h3>setBaseBoard</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setBaseBoard</span><wbr><span class="parameters">(<a href="Board.html" title="class in edu.rpi.legup.model.gameboard">Board</a>&nbsp;baseBoard)</span></div>
+<div class="block">Sets the base board for this CaseBoard.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>baseBoard</code> - the new base board</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getCaseRule()">
 <h3>getCaseRule</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../rules/CaseRule.html" title="class in edu.rpi.legup.model.rules">CaseRule</a></span>&nbsp;<span class="element-name">getCaseRule</span>()</div>
+<div class="block">Retrieves the case rule for this CaseBoard.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the case rule</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="setCaseRule(edu.rpi.legup.model.rules.CaseRule)">
 <h3>setCaseRule</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCaseRule</span><wbr><span class="parameters">(<a href="../rules/CaseRule.html" title="class in edu.rpi.legup.model.rules">CaseRule</a>&nbsp;caseRule)</span></div>
+<div class="block">Sets the case rule for this CaseBoard.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>caseRule</code> - the new case rule</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getCount()">
 <h3>getCount</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getCount</span>()</div>
+<div class="block">Gets the count of pickable puzzle elements.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the number of pickable elements</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="copy()">
 <h3>copy</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CaseBoard.html" title="class in edu.rpi.legup.model.gameboard">CaseBoard</a></span>&nbsp;<span class="element-name">copy</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="Board.html#copy()">Board</a></code></span></div>
-<div class="block">Performs a deep copy of this board.</div>
+<div class="block">Performs a deep copy of this CaseBoard.
+ CURRENTLY NOT IMPLEMENTED AND RETURNS NULL</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Board.html#copy()">copy</a></code>&nbsp;in class&nbsp;<code><a href="Board.html" title="class in edu.rpi.legup.model.gameboard">Board</a></code></dd>
 <dt>Returns:</dt>
-<dd>a new copy of the board that is independent of this one</dd>
+<dd>a new copy of the CaseBoard</dd>
 </dl>
 </section>
 </li>

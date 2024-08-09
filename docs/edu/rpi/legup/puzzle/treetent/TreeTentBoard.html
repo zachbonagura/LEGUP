@@ -178,7 +178,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPuzzleElement(edu.rpi.legup.model.gameboard.PuzzleElement)" class="member-name-link">getPuzzleElement</a><wbr>(<a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&nbsp;element)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets a specific <a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard"><code>PuzzleElement</code></a> on this board.</div>
+<div class="block">Gets a specific <a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard"><code>PuzzleElement</code></a> from the board.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a><wbr>&lt;<a href="TreeTentClue.html" title="class in edu.rpi.legup.puzzle.treetent">TreeTentClue</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRowClues()" class="member-name-link">getRowClues</a>()</code></div>
@@ -212,7 +212,7 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPuzzleElement(int,edu.rpi.legup.model.gameboard.PuzzleElement)" class="member-name-link">setPuzzleElement</a><wbr>(int&nbsp;index,
  <a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&nbsp;puzzleElement)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets a specific <a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard"><code>PuzzleElement</code></a> on the board.</div>
+<div class="block">Sets a specific <a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard"><code>PuzzleElement</code></a> on the board</div>
 </div>
 </div>
 </div>
@@ -299,14 +299,14 @@ loadScripts(document, 'script');</script>
 <h3>getPuzzleElement</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a></span>&nbsp;<span class="element-name">getPuzzleElement</span><wbr><span class="parameters">(<a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&nbsp;element)</span></div>
 <div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="../../model/gameboard/Board.html#getPuzzleElement(edu.rpi.legup.model.gameboard.PuzzleElement)">Board</a></code></span></div>
-<div class="block">Gets a specific <a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard"><code>PuzzleElement</code></a> on this board.</div>
+<div class="block">Gets a specific <a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard"><code>PuzzleElement</code></a> from the board.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="../../model/gameboard/Board.html#getPuzzleElement(edu.rpi.legup.model.gameboard.PuzzleElement)">getPuzzleElement</a></code>&nbsp;in class&nbsp;<code><a href="../../model/gameboard/Board.html" title="class in edu.rpi.legup.model.gameboard">Board</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>element</code> - equivalent puzzleElement</dd>
+<dd><code>element</code> - the puzzle element to retrieve</dd>
 <dt>Returns:</dt>
-<dd>equivalent puzzleElement on this board</dd>
+<dd>the puzzle element at the corresponding index, or null if not found</dd>
 </dl>
 </section>
 </li>
@@ -316,13 +316,13 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPuzzleElement</span><wbr><span class="parameters">(int&nbsp;index,
  <a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&nbsp;puzzleElement)</span></div>
 <div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="../../model/gameboard/Board.html#setPuzzleElement(int,edu.rpi.legup.model.gameboard.PuzzleElement)">Board</a></code></span></div>
-<div class="block">Sets a specific <a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard"><code>PuzzleElement</code></a> on the board.</div>
+<div class="block">Sets a specific <a href="../../model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard"><code>PuzzleElement</code></a> on the board</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="../../model/gameboard/Board.html#setPuzzleElement(int,edu.rpi.legup.model.gameboard.PuzzleElement)">setPuzzleElement</a></code>&nbsp;in class&nbsp;<code><a href="../../model/gameboard/Board.html" title="class in edu.rpi.legup.model.gameboard">Board</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>index</code> - index of the puzzleElement</dd>
-<dd><code>puzzleElement</code> - new puzzleElement at the index</dd>
+<dd><code>puzzleElement</code> - the puzzleElement to set at the index</dd>
 </dl>
 </section>
 </li>

@@ -96,6 +96,8 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">GameBoardFacade</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../history/IHistorySubject.html" title="interface in edu.rpi.legup.history">IHistorySubject</a></span></div>
+<div class="block"><code>GameBoardFacade</code> is a class designed to manage the game board operations within the application.
+ It integrates various components such as UI elements, puzzle management, and history tracking</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -152,7 +154,9 @@ implements <a href="../history/IHistorySubject.html" title="interface in edu.rpi
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearPuzzle()" class="member-name-link">clearPuzzle</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Clears the current puzzle</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/gameboard/Board.html" title="class in edu.rpi.legup.model.gameboard">Board</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBoard()" class="member-name-link">getBoard</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -193,7 +197,9 @@ implements <a href="../history/IHistorySubject.html" title="interface in edu.rpi
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initializeUI()" class="member-name-link">initializeUI</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Initializes the UI components</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#loadPuzzle(java.io.InputStream)" class="member-name-link">loadPuzzle</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;inputStream)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -202,25 +208,31 @@ implements <a href="../history/IHistorySubject.html" title="interface in edu.rpi
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#loadPuzzle(java.lang.String)" class="member-name-link">loadPuzzle</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fileName)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Loads a puzzle file</div>
+<div class="block">Loads a puzzle file from the specified file</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#loadPuzzle(java.lang.String,int,int)" class="member-name-link">loadPuzzle</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;game,
  int&nbsp;rows,
  int&nbsp;columns)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Loads an empty puzzle</div>
+<div class="block">Loads an empty puzzle with the specified dimensions</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#loadPuzzle(java.lang.String,java.lang.String%5B%5D)" class="member-name-link">loadPuzzle</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;game,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;statements)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Loads an empty puzzle with the specified input</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#loadPuzzleEditor(java.io.InputStream)" class="member-name-link">loadPuzzleEditor</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;inputStream)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Loads a puzzle into the editor from the specified input stream</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#loadPuzzleEditor(java.lang.String)" class="member-name-link">loadPuzzleEditor</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fileName)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Loads a puzzle into the editor from the specified file name</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#notifyHistoryListeners(java.util.function.Consumer)" class="member-name-link">notifyHistoryListeners</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;? super <a href="../history/IHistoryListener.html" title="interface in edu.rpi.legup.history">IHistoryListener</a>&gt;&nbsp;algorithm)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -238,13 +250,19 @@ implements <a href="../history/IHistorySubject.html" title="interface in edu.rpi
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setConfig(edu.rpi.legup.app.Config)" class="member-name-link">setConfig</a><wbr>(<a href="Config.html" title="class in edu.rpi.legup.app">Config</a>&nbsp;config)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets the configuration object for the GameBoardFacade</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPuzzle(edu.rpi.legup.model.Puzzle)" class="member-name-link">setPuzzle</a><wbr>(<a href="../model/Puzzle.html" title="class in edu.rpi.legup.model">Puzzle</a>&nbsp;puzzle)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets the current puzzle in the game board</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPuzzleEditor(edu.rpi.legup.model.Puzzle)" class="member-name-link">setPuzzleEditor</a><wbr>(<a href="../model/Puzzle.html" title="class in edu.rpi.legup.model">Puzzle</a>&nbsp;puzzle)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets the current puzzle editor with the given puzzle</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPuzzleModule(edu.rpi.legup.model.Puzzle)" class="member-name-link">setPuzzleModule</a><wbr>(<a href="../model/Puzzle.html" title="class in edu.rpi.legup.model">Puzzle</a>&nbsp;puzzle)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -252,7 +270,9 @@ implements <a href="../history/IHistorySubject.html" title="interface in edu.rpi
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#setupConfig()" class="member-name-link">setupConfig</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Sets up the configuration by initializing the Config object</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setWindowTitle(java.lang.String,java.lang.String)" class="member-name-link">setWindowTitle</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;puzzleName,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fileName)</code></div>
@@ -339,36 +359,54 @@ implements <a href="../history/IHistorySubject.html" title="interface in edu.rpi
 <section class="detail" id="initializeUI()">
 <h3>initializeUI</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">initializeUI</span>()</div>
+<div class="block">Initializes the UI components</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPuzzle(edu.rpi.legup.model.Puzzle)">
 <h3>setPuzzle</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPuzzle</span><wbr><span class="parameters">(<a href="../model/Puzzle.html" title="class in edu.rpi.legup.model">Puzzle</a>&nbsp;puzzle)</span></div>
+<div class="block">Sets the current puzzle in the game board</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>puzzle</code> - the Puzzle to set</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="clearPuzzle()">
 <h3>clearPuzzle</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">clearPuzzle</span>()</div>
+<div class="block">Clears the current puzzle</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setupConfig()">
 <h3>setupConfig</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setupConfig</span>()</div>
+<div class="block">Sets up the configuration by initializing the Config object</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPuzzleEditor(edu.rpi.legup.model.Puzzle)">
 <h3>setPuzzleEditor</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPuzzleEditor</span><wbr><span class="parameters">(<a href="../model/Puzzle.html" title="class in edu.rpi.legup.model">Puzzle</a>&nbsp;puzzle)</span></div>
+<div class="block">Sets the current puzzle editor with the given puzzle</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>puzzle</code> - the Puzzle to set in the editor</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="setConfig(edu.rpi.legup.app.Config)">
 <h3>setConfig</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setConfig</span><wbr><span class="parameters">(<a href="Config.html" title="class in edu.rpi.legup.app">Config</a>&nbsp;config)</span></div>
+<div class="block">Sets the configuration object for the GameBoardFacade</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>config</code> - config the Config object to set</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -418,7 +456,7 @@ implements <a href="../history/IHistorySubject.html" title="interface in edu.rpi
  int&nbsp;rows,
  int&nbsp;columns)</span>
                 throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a></span></div>
-<div class="block">Loads an empty puzzle</div>
+<div class="block">Loads an empty puzzle with the specified dimensions</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>game</code> - name of the puzzle</dd>
@@ -434,6 +472,12 @@ implements <a href="../history/IHistorySubject.html" title="interface in edu.rpi
 <h3>loadPuzzle</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">loadPuzzle</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;game,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;statements)</span></div>
+<div class="block">Loads an empty puzzle with the specified input</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>game</code> - name of the puzzle</dd>
+<dd><code>statements</code> - an array of statements to load the puzzle with</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -441,12 +485,12 @@ implements <a href="../history/IHistorySubject.html" title="interface in edu.rpi
 <h3>loadPuzzle</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">loadPuzzle</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fileName)</span>
                 throws <span class="exceptions"><a href="../save/InvalidFileFormatException.html" title="class in edu.rpi.legup.save">InvalidFileFormatException</a></span></div>
-<div class="block">Loads a puzzle file</div>
+<div class="block">Loads a puzzle file from the specified file</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>fileName</code> - file name of the board file</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../save/InvalidFileFormatException.html" title="class in edu.rpi.legup.save">InvalidFileFormatException</a></code> - if input is invalid</dd>
+<dd><code><a href="../save/InvalidFileFormatException.html" title="class in edu.rpi.legup.save">InvalidFileFormatException</a></code> - if the file format is invalid or if the file cannot be created</dd>
 </dl>
 </section>
 </li>
@@ -455,9 +499,12 @@ implements <a href="../history/IHistorySubject.html" title="interface in edu.rpi
 <h3>loadPuzzleEditor</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">loadPuzzleEditor</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fileName)</span>
                       throws <span class="exceptions"><a href="../save/InvalidFileFormatException.html" title="class in edu.rpi.legup.save">InvalidFileFormatException</a></span></div>
+<div class="block">Loads a puzzle into the editor from the specified file name</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>fileName</code> - the name of the file to load</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../save/InvalidFileFormatException.html" title="class in edu.rpi.legup.save">InvalidFileFormatException</a></code></dd>
+<dd><code><a href="../save/InvalidFileFormatException.html" title="class in edu.rpi.legup.save">InvalidFileFormatException</a></code> - if the file format is invalid or if the file cannot be created</dd>
 </dl>
 </section>
 </li>
@@ -466,9 +513,12 @@ implements <a href="../history/IHistorySubject.html" title="interface in edu.rpi
 <h3>loadPuzzleEditor</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">loadPuzzleEditor</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;inputStream)</span>
                       throws <span class="exceptions"><a href="../save/InvalidFileFormatException.html" title="class in edu.rpi.legup.save">InvalidFileFormatException</a></span></div>
+<div class="block">Loads a puzzle into the editor from the specified input stream</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>inputStream</code> - the input stream to load the puzzle from</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../save/InvalidFileFormatException.html" title="class in edu.rpi.legup.save">InvalidFileFormatException</a></code></dd>
+<dd><code><a href="../save/InvalidFileFormatException.html" title="class in edu.rpi.legup.save">InvalidFileFormatException</a></code> - if the input stream cannot be processed or the file format is invalid</dd>
 </dl>
 </section>
 </li>

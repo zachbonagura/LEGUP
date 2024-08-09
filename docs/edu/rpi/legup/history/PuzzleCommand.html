@@ -100,6 +100,9 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">PuzzleCommand</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="ICommand.html" title="interface in edu.rpi.legup.history">ICommand</a></span></div>
+<div class="block">The PuzzleCommand class is an abstract base class for commands that can be executed, undone, and redone
+ within the puzzle model. It implements the ICommand interface and maintains the state and error handling
+ for the command.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -115,7 +118,7 @@ implements <a href="ICommand.html" title="interface in edu.rpi.legup.history">IC
 <div class="col-first even-row-color"><code>protected </code></div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">PuzzleCommand</a>()</code></div>
 <div class="col-last even-row-color">
-<div class="block">Puzzle Command Constructor for creating an undoable and redoable change to the model.</div>
+<div class="block">Puzzle Command Constructor for creating an undoable and redoable change to the model</div>
 </div>
 </div>
 </section>
@@ -134,17 +137,17 @@ implements <a href="ICommand.html" title="interface in edu.rpi.legup.history">IC
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#canExecute()" class="member-name-link">canExecute</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Determines whether this command can be executed</div>
+<div class="block">Determines whether the command can be executed by checking the error state</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#execute()" class="member-name-link">execute</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Executes an command</div>
+<div class="block">Executes the command if it can be executed</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#executeCommand()" class="member-name-link">executeCommand</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Executes a command</div>
+<div class="block">Executes the command.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getError()" class="member-name-link">getError</a>()</code></div>
@@ -159,22 +162,22 @@ implements <a href="ICommand.html" title="interface in edu.rpi.legup.history">IC
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#redo()" class="member-name-link">redo</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Redoes a command</div>
+<div class="block">Redoes the command if it was previously undone.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#redoCommand()" class="member-name-link">redoCommand</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Redoes a command</div>
+<div class="block">Redoes the command.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#undo()" class="member-name-link">undo</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Undoes a command</div>
+<div class="block">Undoes the command if it was executed or redone</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#undoCommand()" class="member-name-link">undoCommand</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Undoes a command</div>
+<div class="block">Undoes the command.</div>
 </div>
 </div>
 </div>
@@ -197,7 +200,7 @@ implements <a href="ICommand.html" title="interface in edu.rpi.legup.history">IC
 <section class="detail" id="&lt;init&gt;()">
 <h3>PuzzleCommand</h3>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="element-name">PuzzleCommand</span>()</div>
-<div class="block">Puzzle Command Constructor for creating an undoable and redoable change to the model.</div>
+<div class="block">Puzzle Command Constructor for creating an undoable and redoable change to the model</div>
 </section>
 </li>
 </ul>
@@ -212,7 +215,7 @@ implements <a href="ICommand.html" title="interface in edu.rpi.legup.history">IC
 <section class="detail" id="execute()">
 <h3>execute</h3>
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">execute</span>()</div>
-<div class="block">Executes an command</div>
+<div class="block">Executes the command if it can be executed</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ICommand.html#execute()">execute</a></code>&nbsp;in interface&nbsp;<code><a href="ICommand.html" title="interface in edu.rpi.legup.history">ICommand</a></code></dd>
@@ -223,7 +226,7 @@ implements <a href="ICommand.html" title="interface in edu.rpi.legup.history">IC
 <section class="detail" id="canExecute()">
 <h3>canExecute</h3>
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">canExecute</span>()</div>
-<div class="block">Determines whether this command can be executed</div>
+<div class="block">Determines whether the command can be executed by checking the error state</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ICommand.html#canExecute()">canExecute</a></code>&nbsp;in interface&nbsp;<code><a href="ICommand.html" title="interface in edu.rpi.legup.history">ICommand</a></code></dd>
@@ -262,28 +265,30 @@ implements <a href="ICommand.html" title="interface in edu.rpi.legup.history">IC
 <section class="detail" id="executeCommand()">
 <h3>executeCommand</h3>
 <div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">executeCommand</span>()</div>
-<div class="block">Executes a command</div>
+<div class="block">Executes the command.
+ This method must be implemented by subclasses to define the command's execution behavior.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="undoCommand()">
 <h3>undoCommand</h3>
 <div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">undoCommand</span>()</div>
-<div class="block">Undoes a command</div>
+<div class="block">Undoes the command.
+ This method must be implemented by subclasses to define the command's undo behavior.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="redoCommand()">
 <h3>redoCommand</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">redoCommand</span>()</div>
-<div class="block">Redoes a command</div>
+<div class="block">Redoes the command. This method is called if the command was previously undone.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="undo()">
 <h3>undo</h3>
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">undo</span>()</div>
-<div class="block">Undoes a command</div>
+<div class="block">Undoes the command if it was executed or redone</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ICommand.html#undo()">undo</a></code>&nbsp;in interface&nbsp;<code><a href="ICommand.html" title="interface in edu.rpi.legup.history">ICommand</a></code></dd>
@@ -294,7 +299,7 @@ implements <a href="ICommand.html" title="interface in edu.rpi.legup.history">IC
 <section class="detail" id="redo()">
 <h3>redo</h3>
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">redo</span>()</div>
-<div class="block">Redoes a command</div>
+<div class="block">Redoes the command if it was previously undone.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ICommand.html#redo()">redo</a></code>&nbsp;in interface&nbsp;<code><a href="ICommand.html" title="interface in edu.rpi.legup.history">ICommand</a></code></dd>

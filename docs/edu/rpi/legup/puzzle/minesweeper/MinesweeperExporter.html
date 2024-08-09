@@ -131,7 +131,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected @NotNull <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Element.html" title="class or interface in org.w3c.dom" class="external-link">Element</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createBoardElement(org.w3c.dom.Document)" class="member-name-link">createBoardElement</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Document.html" title="class or interface in org.w3c.dom" class="external-link">Document</a>&nbsp;newDocument)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Creates an XML element representing the board of the puzzle.</div>
+</div>
 </div>
 </div>
 </div>
@@ -174,9 +176,16 @@ loadScripts(document, 'script');</script>
 @NotNull
 </span><span class="modifiers">protected</span>&nbsp;<span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Element.html" title="class or interface in org.w3c.dom" class="external-link">Element</a></span>&nbsp;<span class="element-name">createBoardElement</span><wbr><span class="parameters">(@NotNull
  @NotNull <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Document.html" title="class or interface in org.w3c.dom" class="external-link">Document</a>&nbsp;newDocument)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="../../model/PuzzleExporter.html#createBoardElement(org.w3c.dom.Document)">PuzzleExporter</a></code></span></div>
+<div class="block">Creates an XML element representing the board of the puzzle.
+ Subclasses must implement this method to provide the XML structure for the board.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../model/PuzzleExporter.html#createBoardElement(org.w3c.dom.Document)">createBoardElement</a></code>&nbsp;in class&nbsp;<code><a href="../../model/PuzzleExporter.html" title="class in edu.rpi.legup.model">PuzzleExporter</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>newDocument</code> - The XML document to create elements within.</dd>
+<dt>Returns:</dt>
+<dd>An XML element representing the puzzle's board.</dd>
 </dl>
 </section>
 </li>

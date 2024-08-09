@@ -91,6 +91,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">LegupPreferences</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block"><code>LegupPreferences</code> is a class responsible for managing user preferences within the application.
+ It uses Java's Preferences API to store and retrieve preferences, and it provides methods for accessing and updating these preferences.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -150,11 +152,14 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="LegupPreferences.html" title="class in edu.rpi.legup.app">LegupPreferences</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getInstance()" class="member-name-link">getInstance</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Gets the legup preferences singleton instance.</div>
+<div class="block">Gets the legup preferences singleton instance
+ This method ensures that only one instance of LegupPreferences exists</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSavedPath()" class="member-name-link">getSavedPath</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Gets the saved path</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUserPref(java.lang.String)" class="member-name-link">getUserPref</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -162,15 +167,19 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUserPrefAsBool(java.lang.String)" class="member-name-link">getUserPrefAsBool</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves the user preference associated with the specified key as a boolean</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSavedPath(java.lang.String)" class="member-name-link">setSavedPath</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;path)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets the saved path to the specified value</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUserPref(java.lang.String,java.lang.String)" class="member-name-link">setUserPref</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets the user preference by the string key, value pair</div>
+<div class="block">Sets the user preference for the specified key to the provided value</div>
 </div>
 </div>
 </div>
@@ -341,10 +350,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getInstance()">
 <h3>getInstance</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="LegupPreferences.html" title="class in edu.rpi.legup.app">LegupPreferences</a></span>&nbsp;<span class="element-name">getInstance</span>()</div>
-<div class="block">Gets the legup preferences singleton instance.</div>
+<div class="block">Gets the legup preferences singleton instance
+ This method ensures that only one instance of LegupPreferences exists</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>legup preferences</dd>
+<dd>the singleton instance of LegupPreferences</dd>
 </dl>
 </section>
 </li>
@@ -357,7 +367,7 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>key</code> - key name of the preference</dd>
 <dt>Returns:</dt>
-<dd>value of the preference</dd>
+<dd>value of the preference or <code>null</code> if the preference does not exist</dd>
 </dl>
 </section>
 </li>
@@ -366,11 +376,11 @@ loadScripts(document, 'script');</script>
 <h3>setUserPref</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setUserPref</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
-<div class="block">Gets the user preference by the string key, value pair</div>
+<div class="block">Sets the user preference for the specified key to the provided value</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>key</code> - key name of the preference</dd>
-<dd><code>value</code> - value of the preference</dd>
+<dd><code>key</code> - key to set for the preference</dd>
+<dd><code>value</code> - value to set for the preference</dd>
 </dl>
 </section>
 </li>
@@ -378,18 +388,37 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getUserPrefAsBool(java.lang.String)">
 <h3>getUserPrefAsBool</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getUserPrefAsBool</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="block">Retrieves the user preference associated with the specified key as a boolean</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>key</code> - the key for the preference to retrieve</dd>
+<dt>Returns:</dt>
+<dd>the boolean value of the preference</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a></code> - if the preference value cannot be interpreted as a boolean</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getSavedPath()">
 <h3>getSavedPath</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getSavedPath</span>()</div>
+<div class="block">Gets the saved path</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the saved path as a String</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="setSavedPath(java.lang.String)">
 <h3>setSavedPath</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSavedPath</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;path)</span></div>
+<div class="block">Sets the saved path to the specified value</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>path</code> - the new saved path</dd>
+</dl>
 </section>
 </li>
 </ul>

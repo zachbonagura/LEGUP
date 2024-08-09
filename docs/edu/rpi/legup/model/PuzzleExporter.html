@@ -95,6 +95,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">PuzzleExporter</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Abstract class for exporting puzzle data to XML format.
+ This class provides functionality to export a puzzle object, including its board and tree structure, to an XML file.
+ Subclasses must implement methods to create specific elements for the board and the tree.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -141,13 +144,19 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Element.html" title="class or interface in org.w3c.dom" class="external-link">Element</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createBoardElement(org.w3c.dom.Document)" class="member-name-link">createBoardElement</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Document.html" title="class or interface in org.w3c.dom" class="external-link">Document</a>&nbsp;newDocument)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Creates an XML element representing the board of the puzzle.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Element.html" title="class or interface in org.w3c.dom" class="external-link">Element</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createProofElement(org.w3c.dom.Document)" class="member-name-link">createProofElement</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Document.html" title="class or interface in org.w3c.dom" class="external-link">Document</a>&nbsp;newDocument)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Creates an XML element representing the proof of the puzzle, including its tree structure.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Element.html" title="class or interface in org.w3c.dom" class="external-link">Element</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createTreeElement(org.w3c.dom.Document)" class="member-name-link">createTreeElement</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Document.html" title="class or interface in org.w3c.dom" class="external-link">Document</a>&nbsp;newDocument)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Creates an XML element representing the tree structure of the puzzle.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#exportPuzzle(java.lang.String)" class="member-name-link">exportPuzzle</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fileName)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -221,18 +230,42 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="createBoardElement(org.w3c.dom.Document)">
 <h3>createBoardElement</h3>
 <div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Element.html" title="class or interface in org.w3c.dom" class="external-link">Element</a></span>&nbsp;<span class="element-name">createBoardElement</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Document.html" title="class or interface in org.w3c.dom" class="external-link">Document</a>&nbsp;newDocument)</span></div>
+<div class="block">Creates an XML element representing the board of the puzzle.
+ Subclasses must implement this method to provide the XML structure for the board.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>newDocument</code> - The XML document to create elements within.</dd>
+<dt>Returns:</dt>
+<dd>An XML element representing the puzzle's board.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="createProofElement(org.w3c.dom.Document)">
 <h3>createProofElement</h3>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Element.html" title="class or interface in org.w3c.dom" class="external-link">Element</a></span>&nbsp;<span class="element-name">createProofElement</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Document.html" title="class or interface in org.w3c.dom" class="external-link">Document</a>&nbsp;newDocument)</span></div>
+<div class="block">Creates an XML element representing the proof of the puzzle, including its tree structure.
+ This method is used to generate the proof section of the XML, which contains the tree representation.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>newDocument</code> - The XML document to create elements within.</dd>
+<dt>Returns:</dt>
+<dd>An XML element representing the proof of the puzzle.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="createTreeElement(org.w3c.dom.Document)">
 <h3>createTreeElement</h3>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Element.html" title="class or interface in org.w3c.dom" class="external-link">Element</a></span>&nbsp;<span class="element-name">createTreeElement</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/Document.html" title="class or interface in org.w3c.dom" class="external-link">Document</a>&nbsp;newDocument)</span></div>
+<div class="block">Creates an XML element representing the tree structure of the puzzle.
+ This method traverses the tree nodes and transitions, and creates XML elements for each.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>newDocument</code> - The XML document to create elements within.</dd>
+<dt>Returns:</dt>
+<dd>An XML element representing the puzzle's tree structure.</dd>
+</dl>
 </section>
 </li>
 </ul>

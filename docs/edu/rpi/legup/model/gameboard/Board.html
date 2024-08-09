@@ -95,6 +95,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">Board</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Abstract class representing a game board.
+ This class provides functionality for managing puzzle elements, tracking modifications,
+ and determining if the board is modifiable.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -167,7 +170,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getElementCount()" class="member-name-link">getElementCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets the number of elements on the board.</div>
+<div class="block">Gets the number of elements on the board</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModifiedData()" class="member-name-link">getModifiedData</a>()</code></div>
@@ -177,7 +180,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPuzzleElement(edu.rpi.legup.model.gameboard.PuzzleElement)" class="member-name-link">getPuzzleElement</a><wbr>(<a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&nbsp;puzzleElement)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets a specific <a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard"><code>PuzzleElement</code></a> on this board.</div>
+<div class="block">Gets a specific <a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard"><code>PuzzleElement</code></a> from the board.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPuzzleElements()" class="member-name-link">getPuzzleElements</a>()</code></div>
@@ -230,7 +233,7 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPuzzleElement(int,edu.rpi.legup.model.gameboard.PuzzleElement)" class="member-name-link">setPuzzleElement</a><wbr>(int&nbsp;index,
  <a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&nbsp;puzzleElement)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets a specific <a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard"><code>PuzzleElement</code></a> on the board.</div>
+<div class="block">Sets a specific <a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard"><code>PuzzleElement</code></a> on the board</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPuzzleElements(java.util.List)" class="member-name-link">setPuzzleElements</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&gt;&nbsp;puzzleElements)</code></div>
@@ -310,12 +313,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getPuzzleElement(edu.rpi.legup.model.gameboard.PuzzleElement)">
 <h3>getPuzzleElement</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a></span>&nbsp;<span class="element-name">getPuzzleElement</span><wbr><span class="parameters">(<a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&nbsp;puzzleElement)</span></div>
-<div class="block">Gets a specific <a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard"><code>PuzzleElement</code></a> on this board.</div>
+<div class="block">Gets a specific <a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard"><code>PuzzleElement</code></a> from the board.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>puzzleElement</code> - equivalent puzzleElement</dd>
+<dd><code>puzzleElement</code> - the puzzle element to retrieve</dd>
 <dt>Returns:</dt>
-<dd>equivalent puzzleElement on this board</dd>
+<dd>the puzzle element at the corresponding index, or null if not found</dd>
 </dl>
 </section>
 </li>
@@ -324,11 +327,11 @@ loadScripts(document, 'script');</script>
 <h3>setPuzzleElement</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPuzzleElement</span><wbr><span class="parameters">(int&nbsp;index,
  <a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a>&nbsp;puzzleElement)</span></div>
-<div class="block">Sets a specific <a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard"><code>PuzzleElement</code></a> on the board.</div>
+<div class="block">Sets a specific <a href="PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard"><code>PuzzleElement</code></a> on the board</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>index</code> - index of the puzzleElement</dd>
-<dd><code>puzzleElement</code> - new puzzleElement at the index</dd>
+<dd><code>puzzleElement</code> - the puzzleElement to set at the index</dd>
 </dl>
 </section>
 </li>
@@ -336,7 +339,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getElementCount()">
 <h3>getElementCount</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getElementCount</span>()</div>
-<div class="block">Gets the number of elements on the board.</div>
+<div class="block">Gets the number of elements on the board</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>number of elements on the board</dd>

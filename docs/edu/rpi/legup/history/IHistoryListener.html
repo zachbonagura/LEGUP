@@ -91,6 +91,9 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">IHistoryListener</span></div>
+<div class="block">The IHistoryListener interface defines methods for listening to changes in the history of commands.
+ Implementations of this interface can respond to events related to command history such as pushing,
+ undoing, redoing commands, and clearing the history.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -108,24 +111,24 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#onClearHistory()" class="member-name-link">onClearHistory</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Called when the edu.rpi.legup.history is cleared</div>
+<div class="block">Called when the history stack is cleared.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#onPushChange(edu.rpi.legup.history.ICommand)" class="member-name-link">onPushChange</a><wbr>(<a href="ICommand.html" title="interface in edu.rpi.legup.history">ICommand</a>&nbsp;command)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Called when a action is pushed onto the edu.rpi.legup.history stack</div>
+<div class="block">Called when a command is pushed onto the history stack.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#onRedo(boolean,boolean)" class="member-name-link">onRedo</a><wbr>(boolean&nbsp;isBottom,
  boolean&nbsp;isTop)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Called when an action is redone</div>
+<div class="block">Called when a command is redone.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#onUndo(boolean,boolean)" class="member-name-link">onUndo</a><wbr>(boolean&nbsp;isBottom,
  boolean&nbsp;isTop)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Called when an action is undone</div>
+<div class="block">Called when a command is undone.</div>
 </div>
 </div>
 </div>
@@ -145,10 +148,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="onPushChange(edu.rpi.legup.history.ICommand)">
 <h3>onPushChange</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">onPushChange</span><wbr><span class="parameters">(<a href="ICommand.html" title="interface in edu.rpi.legup.history">ICommand</a>&nbsp;command)</span></div>
-<div class="block">Called when a action is pushed onto the edu.rpi.legup.history stack</div>
+<div class="block">Called when a command is pushed onto the history stack.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>command</code> - action to push onto the stack</dd>
+<dd><code>command</code> - the command that was pushed onto the stack</dd>
 </dl>
 </section>
 </li>
@@ -157,7 +160,7 @@ loadScripts(document, 'script');</script>
 <h3>onUndo</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">onUndo</span><wbr><span class="parameters">(boolean&nbsp;isBottom,
  boolean&nbsp;isTop)</span></div>
-<div class="block">Called when an action is undone</div>
+<div class="block">Called when a command is undone.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>isBottom</code> - true if there are no more actions to undo, false otherwise</dd>
@@ -170,7 +173,7 @@ loadScripts(document, 'script');</script>
 <h3>onRedo</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">onRedo</span><wbr><span class="parameters">(boolean&nbsp;isBottom,
  boolean&nbsp;isTop)</span></div>
-<div class="block">Called when an action is redone</div>
+<div class="block">Called when a command is redone.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>isBottom</code> - true if there are no more actions to undo, false otherwise</dd>
@@ -182,7 +185,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="onClearHistory()">
 <h3>onClearHistory</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">onClearHistory</span>()</div>
-<div class="block">Called when the edu.rpi.legup.history is cleared</div>
+<div class="block">Called when the history stack is cleared.</div>
 </section>
 </li>
 </ul>

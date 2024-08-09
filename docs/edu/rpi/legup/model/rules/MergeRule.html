@@ -93,6 +93,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">MergeRule</span>
 <span class="extends-implements">extends <a href="Rule.html" title="class in edu.rpi.legup.model.rules">Rule</a></span></div>
+<div class="block">MergeRule is an implementation of a rule that merges multiple nodes into one.
+ It validates if the merging of nodes is done correctly.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -196,7 +198,7 @@ loadScripts(document, 'script');</script>
 <h3>checkRuleRaw</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">checkRuleRaw</span><wbr><span class="parameters">(<a href="../tree/TreeTransition.html" title="class in edu.rpi.legup.model.tree">TreeTransition</a>&nbsp;transition)</span></div>
 <div class="block">Checks whether the transition logically follows from the parent node using this rule. This
- method is the one that should overridden in child classes</div>
+ method is the one that should have overridden in child classes</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Rule.html#checkRuleRaw(edu.rpi.legup.model.tree.TreeTransition)">checkRuleRaw</a></code>&nbsp;in class&nbsp;<code><a href="Rule.html" title="class in edu.rpi.legup.model.rules">Rule</a></code></dd>

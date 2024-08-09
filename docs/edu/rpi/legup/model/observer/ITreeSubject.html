@@ -91,6 +91,8 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ITreeSubject</span></div>
+<div class="block">ITreeSubject defines methods for managing and notifying listeners about changes to the tree model.
+ Implementations of this interface handle adding, removing, and notifying listeners.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -108,12 +110,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#addTreeListener(edu.rpi.legup.model.observer.ITreeListener)" class="member-name-link">addTreeListener</a><wbr>(<a href="ITreeListener.html" title="interface in edu.rpi.legup.model.observer">ITreeListener</a>&nbsp;listener)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Adds a board listener.</div>
+<div class="block">Adds a tree listener.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#notifyTreeListeners(java.util.function.Consumer)" class="member-name-link">notifyTreeListeners</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;? super <a href="ITreeListener.html" title="interface in edu.rpi.legup.model.observer">ITreeListener</a>&gt;&nbsp;algorithm)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Notifies all of the listeners using the specified algorithm.</div>
+<div class="block">Notifies all the tree listeners using the specified algorithm.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#removeTreeListener(edu.rpi.legup.model.observer.ITreeListener)" class="member-name-link">removeTreeListener</a><wbr>(<a href="ITreeListener.html" title="interface in edu.rpi.legup.model.observer">ITreeListener</a>&nbsp;listener)</code></div>
@@ -138,7 +140,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="addTreeListener(edu.rpi.legup.model.observer.ITreeListener)">
 <h3>addTreeListener</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">addTreeListener</span><wbr><span class="parameters">(<a href="ITreeListener.html" title="interface in edu.rpi.legup.model.observer">ITreeListener</a>&nbsp;listener)</span></div>
-<div class="block">Adds a board listener.</div>
+<div class="block">Adds a tree listener.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>listener</code> - listener to add</dd>
@@ -160,7 +162,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="notifyTreeListeners(java.util.function.Consumer)">
 <h3>notifyTreeListeners</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">notifyTreeListeners</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;? super <a href="ITreeListener.html" title="interface in edu.rpi.legup.model.observer">ITreeListener</a>&gt;&nbsp;algorithm)</span></div>
-<div class="block">Notifies all of the listeners using the specified algorithm.</div>
+<div class="block">Notifies all the tree listeners using the specified algorithm.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>algorithm</code> - algorithm used to notify the listeners</dd>

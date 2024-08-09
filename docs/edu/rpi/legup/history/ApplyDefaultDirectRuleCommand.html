@@ -97,6 +97,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ApplyDefaultDirectRuleCommand</span>
 <span class="extends-implements">extends <a href="PuzzleCommand.html" title="class in edu.rpi.legup.history">PuzzleCommand</a></span></div>
+<div class="block">The ApplyDefaultDirectRuleCommand class represents a command to apply a default direct rule
+ to selected tree nodes in the proof tree.
+ It extends the PuzzleCommand class to handle rule application and undo operation.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -131,7 +134,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#executeCommand()" class="member-name-link">executeCommand</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Executes an command</div>
+<div class="block">Executes the command to apply the default rule to the selected tree nodes.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getErrorString()" class="member-name-link">getErrorString</a>()</code></div>
@@ -141,7 +144,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#undoCommand()" class="member-name-link">undoCommand</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Undoes an command</div>
+<div class="block">Undoes the command by removing the applied default rule from the tree nodes.</div>
 </div>
 </div>
 </div>
@@ -203,7 +206,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="executeCommand()">
 <h3>executeCommand</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">executeCommand</span>()</div>
-<div class="block">Executes an command</div>
+<div class="block">Executes the command to apply the default rule to the selected tree nodes.
+ Updates the puzzle and tree view accordingly.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PuzzleCommand.html#executeCommand()">executeCommand</a></code>&nbsp;in class&nbsp;<code><a href="PuzzleCommand.html" title="class in edu.rpi.legup.history">PuzzleCommand</a></code></dd>
@@ -214,7 +218,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="undoCommand()">
 <h3>undoCommand</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">undoCommand</span>()</div>
-<div class="block">Undoes an command</div>
+<div class="block">Undoes the command by removing the applied default rule from the tree nodes.
+ Updates the puzzle and tree view accordingly.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PuzzleCommand.html#undoCommand()">undoCommand</a></code>&nbsp;in class&nbsp;<code><a href="PuzzleCommand.html" title="class in edu.rpi.legup.history">PuzzleCommand</a></code></dd>

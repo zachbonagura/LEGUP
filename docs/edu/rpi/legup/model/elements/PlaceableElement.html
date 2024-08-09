@@ -97,6 +97,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">PlaceableElement</span>
 <span class="extends-implements">extends <a href="Element.html" title="class in edu.rpi.legup.model.elements">Element</a></span></div>
+<div class="block">Abstract class representing elements that can be placed within the system.
+ Inherits from the <a href="Element.html" title="class in edu.rpi.legup.model.elements"><code>Element</code></a> class and sets the <a href="ElementType.html" title="enum class in edu.rpi.legup.model.elements"><code>ElementType</code></a> to <a href="ElementType.html#PLACEABLE"><code>ElementType.PLACEABLE</code></a>.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -121,7 +123,9 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;elementName,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;imageName)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Constructs a PlaceableElement with the specified details</div>
+</div>
 </div>
 </section>
 </li>
@@ -153,6 +157,14 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;elementName,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;imageName)</span></div>
+<div class="block">Constructs a PlaceableElement with the specified details</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>elementID</code> - Unique identifier for the element</dd>
+<dd><code>elementName</code> - Name of the element</dd>
+<dd><code>description</code> - Description of the element</dd>
+<dd><code>imageName</code> - Name of the image file representing the element</dd>
+</dl>
 </section>
 </li>
 </ul>

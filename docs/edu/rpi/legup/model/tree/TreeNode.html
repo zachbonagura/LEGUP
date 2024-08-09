@@ -93,6 +93,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">TreeNode</span>
 <span class="extends-implements">extends <a href="TreeElement.html" title="class in edu.rpi.legup.model.tree">TreeElement</a></span></div>
+<div class="block">Represents a node in a tree structure. Extends <a href="TreeElement.html" title="class in edu.rpi.legup.model.tree"><code>TreeElement</code></a>.
+ A <code>TreeNode</code> contains a board, references to its parent and children transitions, and indicates
+ if it is the root node of the tree.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -138,7 +141,9 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearChildren()" class="member-name-link">clearChildren</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Clears all children transitions from this tree node.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../utility/DisjointSets.html" title="class in edu.rpi.legup.utility">DisjointSets</a><wbr>&lt;<a href="TreeTransition.html" title="class in edu.rpi.legup.model.tree">TreeTransition</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#findMergingBranches()" class="member-name-link">findMergingBranches</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -154,7 +159,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAncestors()" class="member-name-link">getAncestors</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets all of the ancestors of this node</div>
+<div class="block">Gets a list of the ancestors of this node</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="TreeTransition.html" title="class in edu.rpi.legup.model.tree">TreeTransition</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getChildren()" class="member-name-link">getChildren</a>()</code></div>
@@ -291,10 +296,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getAncestors()">
 <h3>getAncestors</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TreeNode.html" title="class in edu.rpi.legup.model.tree">TreeNode</a>&gt;</span>&nbsp;<span class="element-name">getAncestors</span>()</div>
-<div class="block">Gets all of the ancestors of this node</div>
+<div class="block">Gets a list of the ancestors of this node</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>list of all of the ancestors for this node</dd>
+<dd>list of all the ancestors for this node</dd>
 </dl>
 </section>
 </li>
@@ -454,6 +459,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="clearChildren()">
 <h3>clearChildren</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">clearChildren</span>()</div>
+<div class="block">Clears all children transitions from this tree node.
+ After calling this method, the node will have no child transitions.</div>
 </section>
 </li>
 </ul>

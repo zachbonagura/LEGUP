@@ -219,24 +219,24 @@ implements <a href="../history/IHistoryListener.html" title="interface in edu.rp
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onClearHistory()" class="member-name-link">onClearHistory</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Called when the edu.rpi.legup.history is cleared</div>
+<div class="block">Called when the history stack is cleared.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onPushChange(edu.rpi.legup.history.ICommand)" class="member-name-link">onPushChange</a><wbr>(<a href="../history/ICommand.html" title="interface in edu.rpi.legup.history">ICommand</a>&nbsp;command)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Called when a action is pushed onto the edu.rpi.legup.history stack</div>
+<div class="block">Called when a command is pushed onto the history stack.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onRedo(boolean,boolean)" class="member-name-link">onRedo</a><wbr>(boolean&nbsp;isBottom,
  boolean&nbsp;isTop)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Called when an action is redone</div>
+<div class="block">Called when a command is redone.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onUndo(boolean,boolean)" class="member-name-link">onUndo</a><wbr>(boolean&nbsp;isBottom,
  boolean&nbsp;isTop)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Called when an action is undone</div>
+<div class="block">Called when a command is undone.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>[]</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#promptPuzzle()" class="member-name-link">promptPuzzle</a>()</code></div>
@@ -379,12 +379,12 @@ implements <a href="../history/IHistoryListener.html" title="interface in edu.rp
 <h3>onPushChange</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onPushChange</span><wbr><span class="parameters">(<a href="../history/ICommand.html" title="interface in edu.rpi.legup.history">ICommand</a>&nbsp;command)</span></div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../history/IHistoryListener.html#onPushChange(edu.rpi.legup.history.ICommand)">IHistoryListener</a></code></span></div>
-<div class="block">Called when a action is pushed onto the edu.rpi.legup.history stack</div>
+<div class="block">Called when a command is pushed onto the history stack.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../history/IHistoryListener.html#onPushChange(edu.rpi.legup.history.ICommand)">onPushChange</a></code>&nbsp;in interface&nbsp;<code><a href="../history/IHistoryListener.html" title="interface in edu.rpi.legup.history">IHistoryListener</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>command</code> - action to push onto the stack</dd>
+<dd><code>command</code> - the command that was pushed onto the stack</dd>
 </dl>
 </section>
 </li>
@@ -394,7 +394,7 @@ implements <a href="../history/IHistoryListener.html" title="interface in edu.rp
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onUndo</span><wbr><span class="parameters">(boolean&nbsp;isBottom,
  boolean&nbsp;isTop)</span></div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../history/IHistoryListener.html#onUndo(boolean,boolean)">IHistoryListener</a></code></span></div>
-<div class="block">Called when an action is undone</div>
+<div class="block">Called when a command is undone.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../history/IHistoryListener.html#onUndo(boolean,boolean)">onUndo</a></code>&nbsp;in interface&nbsp;<code><a href="../history/IHistoryListener.html" title="interface in edu.rpi.legup.history">IHistoryListener</a></code></dd>
@@ -410,7 +410,7 @@ implements <a href="../history/IHistoryListener.html" title="interface in edu.rp
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onRedo</span><wbr><span class="parameters">(boolean&nbsp;isBottom,
  boolean&nbsp;isTop)</span></div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../history/IHistoryListener.html#onRedo(boolean,boolean)">IHistoryListener</a></code></span></div>
-<div class="block">Called when an action is redone</div>
+<div class="block">Called when a command is redone.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../history/IHistoryListener.html#onRedo(boolean,boolean)">onRedo</a></code>&nbsp;in interface&nbsp;<code><a href="../history/IHistoryListener.html" title="interface in edu.rpi.legup.history">IHistoryListener</a></code></dd>
@@ -425,7 +425,7 @@ implements <a href="../history/IHistoryListener.html" title="interface in edu.rp
 <h3>onClearHistory</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onClearHistory</span>()</div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../history/IHistoryListener.html#onClearHistory()">IHistoryListener</a></code></span></div>
-<div class="block">Called when the edu.rpi.legup.history is cleared</div>
+<div class="block">Called when the history stack is cleared.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../history/IHistoryListener.html#onClearHistory()">onClearHistory</a></code>&nbsp;in interface&nbsp;<code><a href="../history/IHistoryListener.html" title="interface in edu.rpi.legup.history">IHistoryListener</a></code></dd>
